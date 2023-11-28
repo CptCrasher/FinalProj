@@ -97,6 +97,7 @@ module segmentDisplay(p1, p2);
 	reg [7:0] a, b, c, d, e, f;
 
 	if (p1 < 32'd5 || p2 < 32'd5) begin
+		// display first player's score
 		case(p1)
 			32'd0: begin
 				a = 7'b11000000;
@@ -114,25 +115,87 @@ module segmentDisplay(p1, p2);
 				a = 7'b10011001;
 			end
 		endcase
+		b = 7'b11111101; // display '-' for second character
+		// display second player's score
 		case(p2)
 			32'd0: begin
-				a = 7'b11000000;
+				c = 7'b11000000;
 			end
 			32'd1: begin
-				a = 7'b11111001;
+				c = 7'b11111001;
 			end
 			32'd2: begin
-				a = 7'b10100100;
+				c = 7'b10100100;
 			end
 			32'd3: begin
-				a = 7'b10110000;
+				c = 7'b10110000;
 			end
 			32'd4: begin
-				a = 7'b10011001;
+				c = 7'b10011001;
 			end
 		endcase
-	end else begin
-		// placeholder text
+		d = 7'b11111111;
+		e = 7'b11111111;
+		f = 7'b11111111;
+	end else begin // one of the players has won
+		a = 7'b10001100 // display "P"
+		c = 7'b11000001 // display "V"
+		d = 7'b11111001 // display "I"
+		e = 7'b11000110 // display "C"
+		f = 7'b10000111 // display "t"
+		if (p1 == 32'd5) begin
+			b = 7'b11111001; // display "1" for p1
+		end else if (p2 == 32'd5) begin
+			b = 7'b10100100; // display "2" for p2
+		end
 	end
+
+	assign HEX5[0] = a[0];
+	assign HEX5[1] = a[1];
+	assign HEX5[2] = a[2];
+	assign HEX5[3] = a[3];
+	assign HEX5[4] = a[4];
+	assign HEX5[5] = a[5];
+	assign HEX5[6] = 1
+
+	assign HEX4[0] = b[0];
+	assign HEX4[1] = b[1];
+	assign HEX4[2] = b[2];
+	assign HEX4[3] = b[3];
+	assign HEX4[4] = b[4];
+	assign HEX4[5] = b[5];
+	assign HEX4[6] = 1
+
+	assign HEX3[0] = c[0];
+	assign HEX3[1] = c[1];
+	assign HEX3[2] = c[2];
+	assign HEX3[3] = c[3];
+	assign HEX3[4] = c[4];
+	assign HEX3[5] = c[5];
+	assign HEX3[6] = 1
+
+	assign HEX2[0] = d[0];
+	assign HEX2[1] = d[1];
+	assign HEX2[2] = d[2];
+	assign HEX2[3] = d[3];
+	assign HEX2[4] = d[4];
+	assign HEX2[5] = d[5];
+	assign HEX2[6] = 1
+
+	assign HEX1[0] = e[0];
+	assign HEX1[1] = e[1];
+	assign HEX1[2] = e[2];
+	assign HEX1[3] = e[3];
+	assign HEX1[4] = e[4];
+	assign HEX1[5] = e[5];
+	assign HEX1[6] = 1
+
+	assign HEX0[0] = f[0];
+	assign HEX0[1] = f[1];
+	assign HEX0[2] = f[2];
+	assign HEX0[3] = f[3];
+	assign HEX0[4] = f[4];
+	assign HEX0[5] = f[5];
+	assign HEX0[6] = 1
 
 endmodule
