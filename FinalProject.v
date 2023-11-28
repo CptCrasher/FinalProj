@@ -92,4 +92,47 @@ module counter(clk, reset, dec, lock);
 
 endmodule
 
-// Test if branch works
+module segmentDisplay(p1, p2);
+	input [31:0] p1, p2;
+	reg [7:0] a, b, c, d, e, f;
+
+	if (p1 < 32'd5 || p2 < 32'd5) begin
+		case(p1)
+			32'd0: begin
+				a = 7'b11000000;
+			end
+			32'd1: begin
+				a = 7'b11111001;
+			end
+			32'd2: begin
+				a = 7'b10100100;
+			end
+			32'd3: begin
+				a = 7'b10110000;
+			end
+			32'd4: begin
+				a = 7'b10011001;
+			end
+		endcase
+		case(p2)
+			32'd0: begin
+				a = 7'b11000000;
+			end
+			32'd1: begin
+				a = 7'b11111001;
+			end
+			32'd2: begin
+				a = 7'b10100100;
+			end
+			32'd3: begin
+				a = 7'b10110000;
+			end
+			32'd4: begin
+				a = 7'b10011001;
+			end
+		endcase
+	end else begin
+		// placeholder text
+	end
+
+endmodule
