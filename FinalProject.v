@@ -91,3 +91,5 @@ module counter(clk, reset, dec, lock);
 	end
 
 endmodule
+
+// Test if branch works
