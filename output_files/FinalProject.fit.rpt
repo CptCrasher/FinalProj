@@ -1,5 +1,5 @@
 Fitter report for FinalProject
-Wed Nov 29 20:27:01 2023
+Thu Nov 30 16:44:54 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -69,17 +69,17 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                      ;
 +------------------------------------+------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Nov 29 20:27:01 2023          ;
+; Fitter Status                      ; Successful - Thu Nov 30 16:44:54 2023          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; FinalProject                                   ;
 ; Top-level Entity Name              ; DE10_LITE_Golden_Top                           ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C6GES                               ;
 ; Timing Models                      ; Preliminary                                    ;
-; Total logic elements               ; 226 / 49,760 ( < 1 % )                         ;
-;     Total combinational functions  ; 221 / 49,760 ( < 1 % )                         ;
-;     Dedicated logic registers      ; 132 / 49,760 ( < 1 % )                         ;
-; Total registers                    ; 132                                            ;
+; Total logic elements               ; 317 / 49,760 ( < 1 % )                         ;
+;     Total combinational functions  ; 311 / 49,760 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 168 / 49,760 ( < 1 % )                         ;
+; Total registers                    ; 168                                            ;
 ; Total pins                         ; 185 / 360 ( 51 % )                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                          ;
@@ -155,12 +155,13 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.07        ;
+; Average used               ; 1.16        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.6%      ;
+;     Processor 2            ;   1.5%      ;
+;     Processors 3-12        ;   1.5%      ;
 +----------------------------+-------------+
 
 
@@ -170,8 +171,8 @@ https://fpgasoftware.intel.com/eula.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 815 ) ; 0.00 % ( 0 / 815 )         ; 0.00 % ( 0 / 815 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 815 ) ; 0.00 % ( 0 / 815 )         ; 0.00 % ( 0 / 815 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 943 ) ; 0.00 % ( 0 / 943 )         ; 0.00 % ( 0 / 943 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 943 ) ; 0.00 % ( 0 / 943 )         ; 0.00 % ( 0 / 943 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -194,7 +195,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 799 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 927 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 16 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -210,26 +211,26 @@ The pin-out file can be found in E:/quartus-lite/Labs/FinalProj/output_files/Fin
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 226 / 49,760 ( < 1 % ) ;
-;     -- Combinational with no register       ; 94                     ;
-;     -- Register only                        ; 5                      ;
-;     -- Combinational with a register        ; 127                    ;
+; Total logic elements                        ; 317 / 49,760 ( < 1 % ) ;
+;     -- Combinational with no register       ; 149                    ;
+;     -- Register only                        ; 6                      ;
+;     -- Combinational with a register        ; 162                    ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
-;     -- 4 input functions                    ; 47                     ;
-;     -- 3 input functions                    ; 38                     ;
-;     -- <=2 input functions                  ; 136                    ;
-;     -- Register only                        ; 5                      ;
+;     -- 4 input functions                    ; 83                     ;
+;     -- 3 input functions                    ; 114                    ;
+;     -- <=2 input functions                  ; 114                    ;
+;     -- Register only                        ; 6                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 97                     ;
-;     -- arithmetic mode                      ; 124                    ;
+;     -- normal mode                          ; 156                    ;
+;     -- arithmetic mode                      ; 155                    ;
 ;                                             ;                        ;
-; Total registers*                            ; 132 / 51,509 ( < 1 % ) ;
-;     -- Dedicated logic registers            ; 132 / 49,760 ( < 1 % ) ;
+; Total registers*                            ; 168 / 51,509 ( < 1 % ) ;
+;     -- Dedicated logic registers            ; 168 / 49,760 ( < 1 % ) ;
 ;     -- I/O registers                        ; 0 / 1,749 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 17 / 3,110 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 28 / 3,110 ( < 1 % )   ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 185 / 360 ( 51 % )     ;
 ;     -- Clock pins                           ; 4 / 8 ( 50 % )         ;
@@ -242,19 +243,19 @@ The pin-out file can be found in E:/quartus-lite/Labs/FinalProj/output_files/Fin
 ; Total block memory implementation bits      ; 0 / 1,677,312 ( 0 % )  ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 288 ( 0 % )        ;
 ; PLLs                                        ; 0 / 4 ( 0 % )          ;
-; Global signals                              ; 2                      ;
-;     -- Global clocks                        ; 2 / 20 ( 10 % )        ;
+; Global signals                              ; 4                      ;
+;     -- Global clocks                        ; 4 / 20 ( 20 % )        ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )          ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
 ; Remote update blocks                        ; 0 / 1 ( 0 % )          ;
 ; Oscillator blocks                           ; 0 / 1 ( 0 % )          ;
 ; Impedance control blocks                    ; 0 / 1 ( 0 % )          ;
-; Average interconnect usage (total/H/V)      ; 0.1% / 0.1% / 0.1%     ;
-; Peak interconnect usage (total/H/V)         ; 1.9% / 1.5% / 2.5%     ;
-; Maximum fan-out                             ; 100                    ;
-; Highest non-global fan-out                  ; 43                     ;
-; Total fan-out                               ; 1302                   ;
-; Average fan-out                             ; 1.60                   ;
+; Average interconnect usage (total/H/V)      ; 0.3% / 0.2% / 0.3%     ;
+; Peak interconnect usage (total/H/V)         ; 4.8% / 4.8% / 4.8%     ;
+; Maximum fan-out                             ; 72                     ;
+; Highest non-global fan-out                  ; 69                     ;
+; Total fan-out                               ; 1800                   ;
+; Average fan-out                             ; 1.90                   ;
 +---------------------------------------------+------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -267,33 +268,33 @@ The pin-out file can be found in E:/quartus-lite/Labs/FinalProj/output_files/Fin
 +---------------------------------------------+-----------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                   ; Low                            ;
 ;                                             ;                       ;                                ;
-; Total logic elements                        ; 226 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
-;     -- Combinational with no register       ; 94                    ; 0                              ;
-;     -- Register only                        ; 5                     ; 0                              ;
-;     -- Combinational with a register        ; 127                   ; 0                              ;
+; Total logic elements                        ; 317 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+;     -- Combinational with no register       ; 149                   ; 0                              ;
+;     -- Register only                        ; 6                     ; 0                              ;
+;     -- Combinational with a register        ; 162                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic element usage by number of LUT inputs ;                       ;                                ;
-;     -- 4 input functions                    ; 47                    ; 0                              ;
-;     -- 3 input functions                    ; 38                    ; 0                              ;
-;     -- <=2 input functions                  ; 136                   ; 0                              ;
-;     -- Register only                        ; 5                     ; 0                              ;
+;     -- 4 input functions                    ; 83                    ; 0                              ;
+;     -- 3 input functions                    ; 114                   ; 0                              ;
+;     -- <=2 input functions                  ; 114                   ; 0                              ;
+;     -- Register only                        ; 6                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Logic elements by mode                      ;                       ;                                ;
-;     -- normal mode                          ; 97                    ; 0                              ;
-;     -- arithmetic mode                      ; 124                   ; 0                              ;
+;     -- normal mode                          ; 156                   ; 0                              ;
+;     -- arithmetic mode                      ; 155                   ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total registers                             ; 132                   ; 0                              ;
-;     -- Dedicated logic registers            ; 132 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
+; Total registers                             ; 168                   ; 0                              ;
+;     -- Dedicated logic registers            ; 168 / 49760 ( < 1 % ) ; 0 / 49760 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
-; Total LABs:  partially or completely used   ; 17 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
+; Total LABs:  partially or completely used   ; 28 / 3110 ( < 1 % )   ; 0 / 3110 ( 0 % )               ;
 ;                                             ;                       ;                                ;
 ; Virtual pins                                ; 0                     ; 0                              ;
 ; I/O pins                                    ; 185                   ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 288 ( 0 % )       ; 0 / 288 ( 0 % )                ;
 ; Total memory bits                           ; 0                     ; 0                              ;
 ; Total RAM block bits                        ; 0                     ; 0                              ;
-; Clock control block                         ; 2 / 24 ( 8 % )        ; 0 / 24 ( 0 % )                 ;
+; Clock control block                         ; 4 / 24 ( 16 % )       ; 0 / 24 ( 0 % )                 ;
 ; User Flash Memory                           ; 1 / 1 ( 100 % )       ; 0 / 1 ( 0 % )                  ;
 ; Analog-to-Digital Converter                 ; 2 / 2 ( 100 % )       ; 0 / 2 ( 0 % )                  ;
 ;                                             ;                       ;                                ;
@@ -304,8 +305,8 @@ The pin-out file can be found in E:/quartus-lite/Labs/FinalProj/output_files/Fin
 ;     -- Registered Output Connections        ; 0                     ; 0                              ;
 ;                                             ;                       ;                                ;
 ; Internal Connections                        ;                       ;                                ;
-;     -- Total Connections                    ; 1308                  ; 8                              ;
-;     -- Registered Connections               ; 281                   ; 0                              ;
+;     -- Total Connections                    ; 1806                  ; 8                              ;
+;     -- Registered Connections               ; 420                   ; 0                              ;
 ;                                             ;                       ;                                ;
 ; External Connections                        ;                       ;                                ;
 ;     -- Top                                  ; 142                   ; 0                              ;
@@ -340,9 +341,9 @@ The pin-out file can be found in E:/quartus-lite/Labs/FinalProj/output_files/Fin
 ; ADC_CLK_10     ; N5    ; 2        ; 0            ; 23           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 ; GSENSOR_INT[1] ; Y14   ; 4        ; 51           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 ; GSENSOR_INT[2] ; Y13   ; 4        ; 51           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
-; KEY[0]         ; B8    ; 7        ; 46           ; 54           ; 28           ; 33                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3 V Schmitt Trigger ; --                        ; User                 ; 0         ;
-; KEY[1]         ; A7    ; 7        ; 49           ; 54           ; 28           ; 33                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3 V Schmitt Trigger ; --                        ; User                 ; 0         ;
-; MAX10_CLK1_50  ; P11   ; 3        ; 34           ; 0            ; 28           ; 100                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
+; KEY[0]         ; B8    ; 7        ; 46           ; 54           ; 28           ; 66                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3 V Schmitt Trigger ; --                        ; User                 ; 0         ;
+; KEY[1]         ; A7    ; 7        ; 49           ; 54           ; 28           ; 35                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3 V Schmitt Trigger ; --                        ; User                 ; 0         ;
+; MAX10_CLK1_50  ; P11   ; 3        ; 34           ; 0            ; 28           ; 134                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 ; MAX10_CLK2_50  ; N14   ; 6        ; 78           ; 29           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 ; SW[0]          ; C10   ; 7        ; 51           ; 54           ; 28           ; 2                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
 ; SW[1]          ; C11   ; 7        ; 51           ; 54           ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 3.3-V LVTTL           ; --                        ; User                 ; 0         ;
@@ -467,15 +468,15 @@ The pin-out file can be found in E:/quartus-lite/Labs/FinalProj/output_files/Fin
 +-----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
 ; Name            ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Output Termination ; Termination Control Block ; Output Buffer Pre-emphasis ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +-----------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+------------------------+---------------+-----------+-----------------+------------+----------+--------------+--------------+------------------+--------------------+---------------------------+----------------------------+----------------------+----------------------+---------------------+
-; ARDUINO_IO[0]   ; AB5   ; 3        ; 29           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; ARDUINO_IO[0]   ; AB5   ; 3        ; 29           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; ARDUINO_IO[10]  ; AB19  ; 4        ; 56           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; ARDUINO_IO[11]  ; AA19  ; 4        ; 58           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; ARDUINO_IO[12]  ; Y19   ; 4        ; 62           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; ARDUINO_IO[13]  ; AB20  ; 4        ; 56           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; ARDUINO_IO[14]  ; AB21  ; 4        ; 62           ; 0            ; 28           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; ARDUINO_IO[15]  ; AA20  ; 4        ; 62           ; 0            ; 21           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; ARDUINO_IO[1]   ; AB6   ; 3        ; 29           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
-; ARDUINO_IO[2]   ; AB7   ; 3        ; 29           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; ARDUINO_IO[1]   ; AB6   ; 3        ; 29           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
+; ARDUINO_IO[2]   ; AB7   ; 3        ; 29           ; 0            ; 0            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; no         ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; ARDUINO_IO[3]   ; AB8   ; 3        ; 31           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; ARDUINO_IO[4]   ; AB9   ; 3        ; 34           ; 0            ; 14           ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
 ; ARDUINO_IO[5]   ; Y10   ; 3        ; 34           ; 0            ; 7            ; 0                     ; 0                  ; no     ; no             ; no              ; no                     ; no            ; 2         ; yes             ; yes        ; no       ; Off          ; 3.3-V LVTTL  ; 8mA              ; Off                ; --                        ; no                         ; User                 ; 0 pF                 ; -                   ;
@@ -1187,9 +1188,6 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; DRAM_DQ[15]     ; Missing drive strength ;
 ; GSENSOR_SDI     ; Missing drive strength ;
 ; GSENSOR_SDO     ; Missing drive strength ;
-; ARDUINO_IO[0]   ; Missing drive strength ;
-; ARDUINO_IO[1]   ; Missing drive strength ;
-; ARDUINO_IO[2]   ; Missing drive strength ;
 ; ARDUINO_IO[3]   ; Missing drive strength ;
 ; ARDUINO_IO[4]   ; Missing drive strength ;
 ; ARDUINO_IO[5]   ; Missing drive strength ;
@@ -1240,20 +1238,24 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 ; GPIO[33]        ; Missing drive strength ;
 ; GPIO[34]        ; Missing drive strength ;
 ; GPIO[35]        ; Missing drive strength ;
+; ARDUINO_IO[0]   ; Missing drive strength ;
+; ARDUINO_IO[1]   ; Missing drive strength ;
+; ARDUINO_IO[2]   ; Missing drive strength ;
 +-----------------+------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                       ;
-+-----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                           ; Entity Name          ; Library Name ;
-+-----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------------------------------------------------+----------------------+--------------+
-; |DE10_LITE_Golden_Top       ; 226 (1)     ; 132 (0)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 185  ; 0            ; 94 (1)       ; 5 (0)             ; 127 (0)          ; 0          ; |DE10_LITE_Golden_Top                                         ; DE10_LITE_Golden_Top ; work         ;
-;    |FinalProject:comb_3|    ; 225 (81)    ; 132 (67)                  ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 93 (14)      ; 5 (0)             ; 127 (67)         ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3                     ; FinalProject         ; work         ;
-;       |ClockDivider:comb_3| ; 50 (50)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 5 (5)             ; 28 (28)          ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|ClockDivider:comb_3 ; ClockDivider         ; work         ;
-;       |Counter:comb_4|      ; 77 (77)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 45 (45)      ; 0 (0)             ; 32 (32)          ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|Counter:comb_4      ; Counter              ; work         ;
-;       |display:comb_723|    ; 17 (17)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 0 (0)             ; 0 (0)            ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|display:comb_723    ; display              ; work         ;
-+-----------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+---------------------------------------------------------------+----------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                             ;
++--------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+------------------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node     ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; ADC blocks ; Full Hierarchy Name                                              ; Entity Name          ; Library Name ;
++--------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+------------------------------------------------------------------+----------------------+--------------+
+; |DE10_LITE_Golden_Top          ; 317 (1)     ; 168 (0)                   ; 0 (0)         ; 0           ; 0    ; 1          ; 0            ; 0       ; 0         ; 185  ; 0            ; 149 (1)      ; 6 (0)             ; 162 (0)          ; 0          ; |DE10_LITE_Golden_Top                                            ; DE10_LITE_Golden_Top ; work         ;
+;    |FinalProject:comb_3|       ; 316 (74)    ; 168 (67)                  ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 148 (7)      ; 6 (0)             ; 162 (67)         ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3                        ; FinalProject         ; work         ;
+;       |ClockDivider:comb_3|    ; 50 (50)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 17 (17)      ; 5 (5)             ; 28 (28)          ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|ClockDivider:comb_3    ; ClockDivider         ; work         ;
+;       |Counter:comb_4|         ; 79 (79)     ; 34 (34)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 45 (45)      ; 1 (1)             ; 33 (33)          ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|Counter:comb_4         ; Counter              ; work         ;
+;       |Debouncer:comb_13|      ; 47 (47)     ; 34 (34)                   ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 34 (34)          ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|Debouncer:comb_13      ; Debouncer            ; work         ;
+;       |segmentDisplay:comb_14| ; 66 (66)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 66 (66)      ; 0 (0)             ; 0 (0)            ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|segmentDisplay:comb_14 ; segmentDisplay       ; work         ;
++--------------------------------+-------------+---------------------------+---------------+-------------+------+------------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------+------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -1389,9 +1391,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; DRAM_DQ[15]     ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; GSENSOR_SDI     ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; GSENSOR_SDO     ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; ARDUINO_IO[0]   ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; ARDUINO_IO[1]   ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
-; ARDUINO_IO[2]   ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; ARDUINO_IO[3]   ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; ARDUINO_IO[4]   ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; ARDUINO_IO[5]   ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
@@ -1442,203 +1441,248 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GPIO[33]        ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; GPIO[34]        ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; GPIO[35]        ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; ARDUINO_IO[0]   ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; ARDUINO_IO[1]   ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
+; ARDUINO_IO[2]   ; Bidir    ; --            ; --            ; --                    ; --  ; --   ;
 ; MAX10_CLK1_50   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
-; KEY[0]          ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
-; KEY[1]          ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
-; SW[0]           ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; KEY[0]          ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
+; KEY[1]          ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
+; SW[0]           ; Input    ; (6) 868 ps    ; --            ; --                    ; --  ; --   ;
 ; SW[9]           ; Input    ; --            ; (6) 868 ps    ; --                    ; --  ; --   ;
 +-----------------+----------+---------------+---------------+-----------------------+-----+------+
 
 
-+----------------------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                                   ;
-+----------------------------------------------------+-------------------+---------+
-; Source Pin / Fanout                                ; Pad To Core Index ; Setting ;
-+----------------------------------------------------+-------------------+---------+
-; ADC_CLK_10                                         ;                   ;         ;
-; MAX10_CLK2_50                                      ;                   ;         ;
-; SW[1]                                              ;                   ;         ;
-; SW[2]                                              ;                   ;         ;
-; SW[3]                                              ;                   ;         ;
-; SW[4]                                              ;                   ;         ;
-; SW[5]                                              ;                   ;         ;
-; SW[6]                                              ;                   ;         ;
-; SW[7]                                              ;                   ;         ;
-; SW[8]                                              ;                   ;         ;
-; GSENSOR_INT[1]                                     ;                   ;         ;
-; GSENSOR_INT[2]                                     ;                   ;         ;
-; DRAM_DQ[0]                                         ;                   ;         ;
-; DRAM_DQ[1]                                         ;                   ;         ;
-; DRAM_DQ[2]                                         ;                   ;         ;
-; DRAM_DQ[3]                                         ;                   ;         ;
-; DRAM_DQ[4]                                         ;                   ;         ;
-; DRAM_DQ[5]                                         ;                   ;         ;
-; DRAM_DQ[6]                                         ;                   ;         ;
-; DRAM_DQ[7]                                         ;                   ;         ;
-; DRAM_DQ[8]                                         ;                   ;         ;
-; DRAM_DQ[9]                                         ;                   ;         ;
-; DRAM_DQ[10]                                        ;                   ;         ;
-; DRAM_DQ[11]                                        ;                   ;         ;
-; DRAM_DQ[12]                                        ;                   ;         ;
-; DRAM_DQ[13]                                        ;                   ;         ;
-; DRAM_DQ[14]                                        ;                   ;         ;
-; DRAM_DQ[15]                                        ;                   ;         ;
-; GSENSOR_SDI                                        ;                   ;         ;
-; GSENSOR_SDO                                        ;                   ;         ;
-; ARDUINO_IO[0]                                      ;                   ;         ;
-; ARDUINO_IO[1]                                      ;                   ;         ;
-; ARDUINO_IO[2]                                      ;                   ;         ;
-; ARDUINO_IO[3]                                      ;                   ;         ;
-; ARDUINO_IO[4]                                      ;                   ;         ;
-; ARDUINO_IO[5]                                      ;                   ;         ;
-; ARDUINO_IO[6]                                      ;                   ;         ;
-; ARDUINO_IO[7]                                      ;                   ;         ;
-; ARDUINO_IO[8]                                      ;                   ;         ;
-; ARDUINO_IO[9]                                      ;                   ;         ;
-; ARDUINO_IO[10]                                     ;                   ;         ;
-; ARDUINO_IO[11]                                     ;                   ;         ;
-; ARDUINO_IO[12]                                     ;                   ;         ;
-; ARDUINO_IO[13]                                     ;                   ;         ;
-; ARDUINO_IO[14]                                     ;                   ;         ;
-; ARDUINO_IO[15]                                     ;                   ;         ;
-; ARDUINO_RESET_N                                    ;                   ;         ;
-; GPIO[0]                                            ;                   ;         ;
-; GPIO[1]                                            ;                   ;         ;
-; GPIO[2]                                            ;                   ;         ;
-; GPIO[3]                                            ;                   ;         ;
-; GPIO[4]                                            ;                   ;         ;
-; GPIO[5]                                            ;                   ;         ;
-; GPIO[6]                                            ;                   ;         ;
-; GPIO[7]                                            ;                   ;         ;
-; GPIO[8]                                            ;                   ;         ;
-; GPIO[9]                                            ;                   ;         ;
-; GPIO[10]                                           ;                   ;         ;
-; GPIO[11]                                           ;                   ;         ;
-; GPIO[12]                                           ;                   ;         ;
-; GPIO[13]                                           ;                   ;         ;
-; GPIO[14]                                           ;                   ;         ;
-; GPIO[15]                                           ;                   ;         ;
-; GPIO[16]                                           ;                   ;         ;
-; GPIO[17]                                           ;                   ;         ;
-; GPIO[18]                                           ;                   ;         ;
-; GPIO[19]                                           ;                   ;         ;
-; GPIO[20]                                           ;                   ;         ;
-; GPIO[21]                                           ;                   ;         ;
-; GPIO[22]                                           ;                   ;         ;
-; GPIO[23]                                           ;                   ;         ;
-; GPIO[24]                                           ;                   ;         ;
-; GPIO[25]                                           ;                   ;         ;
-; GPIO[26]                                           ;                   ;         ;
-; GPIO[27]                                           ;                   ;         ;
-; GPIO[28]                                           ;                   ;         ;
-; GPIO[29]                                           ;                   ;         ;
-; GPIO[30]                                           ;                   ;         ;
-; GPIO[31]                                           ;                   ;         ;
-; GPIO[32]                                           ;                   ;         ;
-; GPIO[33]                                           ;                   ;         ;
-; GPIO[34]                                           ;                   ;         ;
-; GPIO[35]                                           ;                   ;         ;
-; MAX10_CLK1_50                                      ;                   ;         ;
-; KEY[0]                                             ;                   ;         ;
-;      - FinalProject:comb_3|p1_score[31]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[30]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[29]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[28]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[27]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[26]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[25]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[24]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[23]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[22]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[13]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[12]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[11]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[21]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[20]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[19]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[18]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[10]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[9]             ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[8]             ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[7]             ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[17]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[16]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[15]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[6]             ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[5]             ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[4]             ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[14]            ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[3]             ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[2]             ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[1]             ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[0]             ; 1                 ; 6       ;
-;      - FinalProject:comb_3|p1_score[0]~1           ; 1                 ; 6       ;
-; KEY[1]                                             ;                   ;         ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~0    ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec[1]~1 ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~2    ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~3    ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~4    ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~5    ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~6    ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~7    ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~8    ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~9    ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~10   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~11   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~12   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~13   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~14   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~15   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~16   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~17   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~18   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~19   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~20   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~21   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~22   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~23   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~24   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~25   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~26   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~27   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~28   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~29   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~30   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~31   ; 0                 ; 6       ;
-;      - FinalProject:comb_3|Counter:comb_4|dec~32   ; 0                 ; 6       ;
-; SW[0]                                              ;                   ;         ;
-;      - FinalProject:comb_3|SW0_debounced~0         ; 1                 ; 6       ;
-;      - FinalProject:comb_3|counter[31]~42          ; 1                 ; 6       ;
-; SW[9]                                              ;                   ;         ;
-;      - FinalProject:comb_3|counter[31]~42          ; 1                 ; 6       ;
-;      - FinalProject:comb_3|SW9_debounced~0         ; 1                 ; 6       ;
-+----------------------------------------------------+-------------------+---------+
++--------------------------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                                             ;
++--------------------------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                                          ; Pad To Core Index ; Setting ;
++--------------------------------------------------------------+-------------------+---------+
+; ADC_CLK_10                                                   ;                   ;         ;
+; MAX10_CLK2_50                                                ;                   ;         ;
+; SW[1]                                                        ;                   ;         ;
+; SW[2]                                                        ;                   ;         ;
+; SW[3]                                                        ;                   ;         ;
+; SW[4]                                                        ;                   ;         ;
+; SW[5]                                                        ;                   ;         ;
+; SW[6]                                                        ;                   ;         ;
+; SW[7]                                                        ;                   ;         ;
+; SW[8]                                                        ;                   ;         ;
+; GSENSOR_INT[1]                                               ;                   ;         ;
+; GSENSOR_INT[2]                                               ;                   ;         ;
+; DRAM_DQ[0]                                                   ;                   ;         ;
+; DRAM_DQ[1]                                                   ;                   ;         ;
+; DRAM_DQ[2]                                                   ;                   ;         ;
+; DRAM_DQ[3]                                                   ;                   ;         ;
+; DRAM_DQ[4]                                                   ;                   ;         ;
+; DRAM_DQ[5]                                                   ;                   ;         ;
+; DRAM_DQ[6]                                                   ;                   ;         ;
+; DRAM_DQ[7]                                                   ;                   ;         ;
+; DRAM_DQ[8]                                                   ;                   ;         ;
+; DRAM_DQ[9]                                                   ;                   ;         ;
+; DRAM_DQ[10]                                                  ;                   ;         ;
+; DRAM_DQ[11]                                                  ;                   ;         ;
+; DRAM_DQ[12]                                                  ;                   ;         ;
+; DRAM_DQ[13]                                                  ;                   ;         ;
+; DRAM_DQ[14]                                                  ;                   ;         ;
+; DRAM_DQ[15]                                                  ;                   ;         ;
+; GSENSOR_SDI                                                  ;                   ;         ;
+; GSENSOR_SDO                                                  ;                   ;         ;
+; ARDUINO_IO[3]                                                ;                   ;         ;
+; ARDUINO_IO[4]                                                ;                   ;         ;
+; ARDUINO_IO[5]                                                ;                   ;         ;
+; ARDUINO_IO[6]                                                ;                   ;         ;
+; ARDUINO_IO[7]                                                ;                   ;         ;
+; ARDUINO_IO[8]                                                ;                   ;         ;
+; ARDUINO_IO[9]                                                ;                   ;         ;
+; ARDUINO_IO[10]                                               ;                   ;         ;
+; ARDUINO_IO[11]                                               ;                   ;         ;
+; ARDUINO_IO[12]                                               ;                   ;         ;
+; ARDUINO_IO[13]                                               ;                   ;         ;
+; ARDUINO_IO[14]                                               ;                   ;         ;
+; ARDUINO_IO[15]                                               ;                   ;         ;
+; ARDUINO_RESET_N                                              ;                   ;         ;
+; GPIO[0]                                                      ;                   ;         ;
+; GPIO[1]                                                      ;                   ;         ;
+; GPIO[2]                                                      ;                   ;         ;
+; GPIO[3]                                                      ;                   ;         ;
+; GPIO[4]                                                      ;                   ;         ;
+; GPIO[5]                                                      ;                   ;         ;
+; GPIO[6]                                                      ;                   ;         ;
+; GPIO[7]                                                      ;                   ;         ;
+; GPIO[8]                                                      ;                   ;         ;
+; GPIO[9]                                                      ;                   ;         ;
+; GPIO[10]                                                     ;                   ;         ;
+; GPIO[11]                                                     ;                   ;         ;
+; GPIO[12]                                                     ;                   ;         ;
+; GPIO[13]                                                     ;                   ;         ;
+; GPIO[14]                                                     ;                   ;         ;
+; GPIO[15]                                                     ;                   ;         ;
+; GPIO[16]                                                     ;                   ;         ;
+; GPIO[17]                                                     ;                   ;         ;
+; GPIO[18]                                                     ;                   ;         ;
+; GPIO[19]                                                     ;                   ;         ;
+; GPIO[20]                                                     ;                   ;         ;
+; GPIO[21]                                                     ;                   ;         ;
+; GPIO[22]                                                     ;                   ;         ;
+; GPIO[23]                                                     ;                   ;         ;
+; GPIO[24]                                                     ;                   ;         ;
+; GPIO[25]                                                     ;                   ;         ;
+; GPIO[26]                                                     ;                   ;         ;
+; GPIO[27]                                                     ;                   ;         ;
+; GPIO[28]                                                     ;                   ;         ;
+; GPIO[29]                                                     ;                   ;         ;
+; GPIO[30]                                                     ;                   ;         ;
+; GPIO[31]                                                     ;                   ;         ;
+; GPIO[32]                                                     ;                   ;         ;
+; GPIO[33]                                                     ;                   ;         ;
+; GPIO[34]                                                     ;                   ;         ;
+; GPIO[35]                                                     ;                   ;         ;
+; ARDUINO_IO[0]                                                ;                   ;         ;
+; ARDUINO_IO[1]                                                ;                   ;         ;
+; ARDUINO_IO[2]                                                ;                   ;         ;
+; MAX10_CLK1_50                                                ;                   ;         ;
+; KEY[0]                                                       ;                   ;         ;
+;      - FinalProject:comb_3|p2_score[31]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[30]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[29]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[28]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[27]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[26]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[25]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[24]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[23]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[22]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[21]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[20]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[19]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[18]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[17]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[16]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[15]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[14]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[13]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[12]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[11]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[10]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[9]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[8]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[7]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[6]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[5]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[4]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[3]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[2]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[1]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[0]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[31]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[30]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[29]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[28]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[27]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[26]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[25]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[24]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[23]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[22]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[21]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[20]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[19]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[18]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[17]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[16]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[15]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[14]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[13]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[12]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[11]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[10]                      ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[9]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[8]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[7]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[6]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[5]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[4]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[3]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[2]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[0]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[1]                       ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p2_score[14]~3                    ; 0                 ; 6       ;
+;      - FinalProject:comb_3|p1_score[17]~0                    ; 0                 ; 6       ;
+; KEY[1]                                                       ;                   ;         ;
+;      - FinalProject:comb_3|Counter:comb_4|dec[25]~58         ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~60             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~61             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~62             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~63             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~64             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~65             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~66             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~67             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~68             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~69             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~70             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~71             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~72             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~73             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~74             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~75             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~76             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~77             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~78             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~79             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~80             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~81             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~82             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~83             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~84             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~85             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~86             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~87             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~88             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~89             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~90             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|dec~91             ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|ARDUINO[1]~0       ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Counter:comb_4|in_idle~feeder     ; 1                 ; 6       ;
+; SW[0]                                                        ;                   ;         ;
+;      - FinalProject:comb_3|Debouncer:comb_13|SW0_debounced~0 ; 0                 ; 6       ;
+;      - FinalProject:comb_3|Debouncer:comb_13|counter[14]~44  ; 0                 ; 6       ;
+; SW[9]                                                        ;                   ;         ;
+;      - FinalProject:comb_3|Debouncer:comb_13|SW9_debounced~0 ; 1                 ; 6       ;
+;      - FinalProject:comb_3|Debouncer:comb_13|counter[14]~44  ; 1                 ; 6       ;
++--------------------------------------------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                   ;
-+------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                                 ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; FinalProject:comb_3|ClockDivider:comb_3|LessThan0~11 ; LCCOMB_X45_Y25_N26 ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; FinalProject:comb_3|ClockDivider:comb_3|cout         ; FF_X45_Y25_N5      ; 32      ; Clock        ; yes    ; Global Clock         ; GCLK15           ; --                        ;
-; FinalProject:comb_3|Counter:comb_4|dec[1]~1          ; LCCOMB_X45_Y50_N12 ; 31      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; FinalProject:comb_3|Equal0~10                        ; LCCOMB_X45_Y51_N6  ; 35      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; FinalProject:comb_3|p1_score[0]~1                    ; LCCOMB_X46_Y49_N6  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; KEY[0]                                               ; PIN_B8             ; 33      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; MAX10_CLK1_50                                        ; PIN_P11            ; 100     ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
-+------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                    ;
++-------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                  ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; FinalProject:comb_3|ClockDivider:comb_3|LessThan0~11  ; LCCOMB_X58_Y23_N30 ; 32      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; FinalProject:comb_3|ClockDivider:comb_3|cout          ; FF_X58_Y23_N13     ; 34      ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
+; FinalProject:comb_3|Counter:comb_4|dec[25]~58         ; LCCOMB_X50_Y48_N12 ; 3       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; FinalProject:comb_3|Counter:comb_4|dec[25]~59         ; LCCOMB_X50_Y48_N6  ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; FinalProject:comb_3|Debouncer:comb_13|Equal0~10       ; LCCOMB_X55_Y45_N24 ; 35      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; FinalProject:comb_3|p1_score[17]~0                    ; LCCOMB_X50_Y45_N12 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; FinalProject:comb_3|p2_score[14]~3                    ; LCCOMB_X50_Y45_N24 ; 32      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; FinalProject:comb_3|segmentDisplay:comb_14|WideNor0~0 ; LCCOMB_X47_Y45_N0  ; 6       ; Latch enable ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; FinalProject:comb_3|segmentDisplay:comb_14|WideNor1   ; LCCOMB_X52_Y45_N10 ; 6       ; Latch enable ; yes    ; Global Clock         ; GCLK6            ; --                        ;
+; KEY[0]                                                ; PIN_B8             ; 66      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; MAX10_CLK1_50                                         ; PIN_P11            ; 63      ; Clock        ; no     ; --                   ; --               ; --                        ;
+; MAX10_CLK1_50                                         ; PIN_P11            ; 72      ; Clock        ; yes    ; Global Clock         ; GCLK19           ; --                        ;
++-------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                                         ;
-+----------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                                         ; Location      ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; FF_X45_Y25_N5 ; 32      ; 6                                    ; Global Clock         ; GCLK15           ; --                        ;
-; MAX10_CLK1_50                                ; PIN_P11       ; 100     ; 21                                   ; Global Clock         ; GCLK19           ; --                        ;
-+----------------------------------------------+---------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                                       ;
++-------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                                                  ; Location           ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; FinalProject:comb_3|ClockDivider:comb_3|cout          ; FF_X58_Y23_N13     ; 34      ; 0                                    ; Global Clock         ; GCLK7            ; --                        ;
+; FinalProject:comb_3|segmentDisplay:comb_14|WideNor0~0 ; LCCOMB_X47_Y45_N0  ; 6       ; 0                                    ; Global Clock         ; GCLK14           ; --                        ;
+; FinalProject:comb_3|segmentDisplay:comb_14|WideNor1   ; LCCOMB_X52_Y45_N10 ; 6       ; 0                                    ; Global Clock         ; GCLK6            ; --                        ;
+; MAX10_CLK1_50                                         ; PIN_P11            ; 72      ; 0                                    ; Global Clock         ; GCLK19           ; --                        ;
++-------------------------------------------------------+--------------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------+
@@ -1646,27 +1690,27 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-------------------------+
 ; Routing Resource Type ; Usage                   ;
 +-----------------------+-------------------------+
-; Block interconnects   ; 257 / 148,641 ( < 1 % ) ;
-; C16 interconnects     ; 8 / 5,382 ( < 1 % )     ;
-; C4 interconnects      ; 120 / 106,704 ( < 1 % ) ;
-; Direct links          ; 88 / 148,641 ( < 1 % )  ;
-; Global clocks         ; 2 / 20 ( 10 % )         ;
-; Local interconnects   ; 145 / 49,760 ( < 1 % )  ;
+; Block interconnects   ; 428 / 148,641 ( < 1 % ) ;
+; C16 interconnects     ; 34 / 5,382 ( < 1 % )    ;
+; C4 interconnects      ; 228 / 106,704 ( < 1 % ) ;
+; Direct links          ; 122 / 148,641 ( < 1 % ) ;
+; Global clocks         ; 4 / 20 ( 20 % )         ;
+; Local interconnects   ; 190 / 49,760 ( < 1 % )  ;
 ; NSLEEPs               ; 0 / 500 ( 0 % )         ;
-; R24 interconnects     ; 7 / 5,406 ( < 1 % )     ;
-; R4 interconnects      ; 119 / 147,764 ( < 1 % ) ;
+; R24 interconnects     ; 21 / 5,406 ( < 1 % )    ;
+; R4 interconnects      ; 292 / 147,764 ( < 1 % ) ;
 +-----------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.29) ; Number of LABs  (Total = 17) ;
+; Number of Logic Elements  (Average = 11.32) ; Number of LABs  (Total = 28) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 1                            ;
-; 2                                           ; 1                            ;
-; 3                                           ; 0                            ;
-; 4                                           ; 1                            ;
+; 1                                           ; 3                            ;
+; 2                                           ; 2                            ;
+; 3                                           ; 2                            ;
+; 4                                           ; 2                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 0                            ;
 ; 7                                           ; 0                            ;
@@ -1675,35 +1719,37 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 10                                          ; 0                            ;
 ; 11                                          ; 0                            ;
 ; 12                                          ; 0                            ;
-; 13                                          ; 1                            ;
+; 13                                          ; 2                            ;
 ; 14                                          ; 1                            ;
 ; 15                                          ; 0                            ;
-; 16                                          ; 12                           ;
+; 16                                          ; 16                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.24) ; Number of LABs  (Total = 17) ;
+; LAB-wide Signals  (Average = 1.00) ; Number of LABs  (Total = 28) ;
 +------------------------------------+------------------------------+
-; 1 Clock                            ; 11                           ;
-; 1 Clock enable                     ; 4                            ;
-; 1 Sync. clear                      ; 4                            ;
+; 1 Clock                            ; 13                           ;
+; 1 Clock enable                     ; 5                            ;
+; 1 Sync. clear                      ; 6                            ;
 ; 1 Sync. load                       ; 2                            ;
+; 2 Clock enables                    ; 1                            ;
+; 2 Clocks                           ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 20.82) ; Number of LABs  (Total = 17) ;
+; Number of Signals Sourced  (Average = 17.18) ; Number of LABs  (Total = 28) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 1                            ;
-; 2                                            ; 1                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 1                            ;
+; 1                                            ; 3                            ;
+; 2                                            ; 2                            ;
+; 3                                            ; 2                            ;
+; 4                                            ; 2                            ;
 ; 5                                            ; 0                            ;
 ; 6                                            ; 0                            ;
 ; 7                                            ; 0                            ;
@@ -1712,77 +1758,77 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
+; 13                                           ; 1                            ;
 ; 14                                           ; 1                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 2                            ;
-; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 1                            ;
+; 16                                           ; 3                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 1                            ;
+; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
 ; 21                                           ; 0                            ;
-; 22                                           ; 0                            ;
+; 22                                           ; 1                            ;
 ; 23                                           ; 1                            ;
-; 24                                           ; 2                            ;
+; 24                                           ; 1                            ;
 ; 25                                           ; 0                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 1                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
 ; 28                                           ; 0                            ;
-; 29                                           ; 0                            ;
+; 29                                           ; 1                            ;
 ; 30                                           ; 1                            ;
-; 31                                           ; 0                            ;
-; 32                                           ; 4                            ;
+; 31                                           ; 2                            ;
+; 32                                           ; 5                            ;
 +----------------------------------------------+------------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                         ;
-+--------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 11.35) ; Number of LABs  (Total = 17) ;
-+--------------------------------------------------+------------------------------+
-; 0                                                ; 0                            ;
-; 1                                                ; 1                            ;
-; 2                                                ; 1                            ;
-; 3                                                ; 1                            ;
-; 4                                                ; 2                            ;
-; 5                                                ; 0                            ;
-; 6                                                ; 0                            ;
-; 7                                                ; 0                            ;
-; 8                                                ; 0                            ;
-; 9                                                ; 0                            ;
-; 10                                               ; 0                            ;
-; 11                                               ; 0                            ;
-; 12                                               ; 1                            ;
-; 13                                               ; 3                            ;
-; 14                                               ; 0                            ;
-; 15                                               ; 0                            ;
-; 16                                               ; 8                            ;
-+--------------------------------------------------+------------------------------+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 9.82) ; Number of LABs  (Total = 28) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 0                            ;
+; 1                                               ; 4                            ;
+; 2                                               ; 2                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 2                            ;
+; 5                                               ; 0                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 1                            ;
+; 8                                               ; 0                            ;
+; 9                                               ; 1                            ;
+; 10                                              ; 2                            ;
+; 11                                              ; 2                            ;
+; 12                                              ; 0                            ;
+; 13                                              ; 0                            ;
+; 14                                              ; 0                            ;
+; 15                                              ; 0                            ;
+; 16                                              ; 12                           ;
++-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 13.29) ; Number of LABs  (Total = 17) ;
+; Number of Distinct Inputs  (Average = 12.04) ; Number of LABs  (Total = 28) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 0                            ;
+; 3                                            ; 1                            ;
 ; 4                                            ; 4                            ;
-; 5                                            ; 2                            ;
-; 6                                            ; 0                            ;
+; 5                                            ; 5                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 0                            ;
 ; 8                                            ; 1                            ;
-; 9                                            ; 0                            ;
-; 10                                           ; 1                            ;
-; 11                                           ; 0                            ;
+; 9                                            ; 1                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 2                            ;
 ; 12                                           ; 0                            ;
 ; 13                                           ; 0                            ;
-; 14                                           ; 1                            ;
+; 14                                           ; 2                            ;
 ; 15                                           ; 0                            ;
 ; 16                                           ; 2                            ;
-; 17                                           ; 1                            ;
+; 17                                           ; 3                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 0                            ;
 ; 20                                           ; 0                            ;
@@ -1790,17 +1836,17 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; 22                                           ; 1                            ;
 ; 23                                           ; 0                            ;
 ; 24                                           ; 0                            ;
-; 25                                           ; 0                            ;
+; 25                                           ; 1                            ;
 ; 26                                           ; 0                            ;
 ; 27                                           ; 1                            ;
-; 28                                           ; 0                            ;
+; 28                                           ; 1                            ;
 ; 29                                           ; 0                            ;
 ; 30                                           ; 0                            ;
 ; 31                                           ; 0                            ;
 ; 32                                           ; 0                            ;
 ; 33                                           ; 0                            ;
 ; 34                                           ; 0                            ;
-; 35                                           ; 2                            ;
+; 35                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1860,9 +1906,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
 ; Pin/Rules          ; IO_000001 ; IO_000002    ; IO_000003 ; IO_000004    ; IO_000005    ; IO_000006 ; IO_000007 ; IO_000008    ; IO_000009 ; IO_000010 ; IO_000011    ; IO_000012    ; IO_000013    ; IO_000014    ; IO_000015    ; IO_000018    ; IO_000019    ; IO_000020    ; IO_000021    ; IO_000022    ; IO_000023    ; IO_000024    ; IO_000026    ; IO_000027    ; IO_000045    ; IO_000046    ; IO_000047    ; IO_000033 ; IO_000034    ; IO_000042    ;
 +--------------------+-----------+--------------+-----------+--------------+--------------+-----------+-----------+--------------+-----------+-----------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+-----------+--------------+--------------+
-; Total Pass         ; 185       ; 0            ; 185       ; 0            ; 0            ; 185       ; 185       ; 0            ; 185       ; 185       ; 0            ; 0            ; 0            ; 0            ; 88           ; 0            ; 0            ; 88           ; 0            ; 0            ; 71           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 185       ; 0            ; 0            ;
+; Total Pass         ; 185       ; 0            ; 185       ; 0            ; 0            ; 185       ; 185       ; 0            ; 185       ; 185       ; 0            ; 0            ; 0            ; 0            ; 88           ; 0            ; 0            ; 88           ; 0            ; 0            ; 68           ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 185       ; 0            ; 0            ;
 ; Total Unchecked    ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
-; Total Inapplicable ; 0         ; 185          ; 0         ; 185          ; 185          ; 0         ; 0         ; 185          ; 0         ; 0         ; 185          ; 185          ; 185          ; 185          ; 97           ; 185          ; 185          ; 97           ; 185          ; 185          ; 114          ; 185          ; 185          ; 185          ; 185          ; 185          ; 185          ; 0         ; 185          ; 185          ;
+; Total Inapplicable ; 0         ; 185          ; 0         ; 185          ; 185          ; 0         ; 0         ; 185          ; 0         ; 0         ; 185          ; 185          ; 185          ; 185          ; 97           ; 185          ; 185          ; 97           ; 185          ; 185          ; 117          ; 185          ; 185          ; 185          ; 185          ; 185          ; 185          ; 0         ; 185          ; 185          ;
 ; Total Fail         ; 0         ; 0            ; 0         ; 0            ; 0            ; 0         ; 0         ; 0            ; 0         ; 0         ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0         ; 0            ; 0            ;
 ; ADC_CLK_10         ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; MAX10_CLK2_50      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -1991,9 +2037,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; DRAM_DQ[15]        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; GSENSOR_SDI        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; GSENSOR_SDO        ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; ARDUINO_IO[0]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; ARDUINO_IO[1]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
-; ARDUINO_IO[2]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; ARDUINO_IO[3]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; ARDUINO_IO[4]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; ARDUINO_IO[5]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2044,6 +2087,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; GPIO[33]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; GPIO[34]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; GPIO[35]           ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; ARDUINO_IO[0]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; ARDUINO_IO[1]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
+; ARDUINO_IO[2]      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; MAX10_CLK1_50      ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[0]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
 ; KEY[1]             ; Pass      ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Pass      ; Pass      ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Pass         ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Inapplicable ; Pass      ; Inapplicable ; Inapplicable ;
@@ -2089,57 +2135,130 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------+--------+
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Summary              ;
-+-----------------+----------------------+-------------------+
-; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-; MAX10_CLK1_50   ; MAX10_CLK1_50        ; 4.2               ;
-+-----------------+----------------------+-------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Summary                                                                                                            ;
++----------------------------------------------------------------+---------------------------------------------------------------------+-------------------+
+; Source Clock(s)                                                ; Destination Clock(s)                                                ; Delay Added in ns ;
++----------------------------------------------------------------+---------------------------------------------------------------------+-------------------+
+; MAX10_CLK1_50                                                  ; FinalProject:comb_3|p1_score[0]                                     ; 38.2              ;
+; MAX10_CLK1_50                                                  ; FinalProject:comb_3|p2_score[0]                                     ; 30.0              ;
+; MAX10_CLK1_50                                                  ; MAX10_CLK1_50                                                       ; 13.2              ;
+; MAX10_CLK1_50                                                  ; FinalProject:comb_3|ClockDivider:comb_3|cout                        ; 11.6              ;
+; MAX10_CLK1_50,FinalProject:comb_3|ClockDivider:comb_3|cout,I/O ; MAX10_CLK1_50                                                       ; 7.5               ;
+; MAX10_CLK1_50                                                  ; FinalProject:comb_3|p1_score[0],FinalProject:comb_3|p2_score[0],I/O ; 6.5               ;
+; MAX10_CLK1_50,FinalProject:comb_3|ClockDivider:comb_3|cout     ; MAX10_CLK1_50                                                       ; 3.4               ;
++----------------------------------------------------------------+---------------------------------------------------------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the Timing Analyzer.
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details                                                                        ;
-+---------------------------------------------------+----------------------------------------------+-------------------+
-; Source Register                                   ; Destination Register                         ; Delay Added in ns ;
-+---------------------------------------------------+----------------------------------------------+-------------------+
-; FinalProject:comb_3|ClockDivider:comb_3|cout      ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 4.186             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[30] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[29] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[28] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[27] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[26] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[25] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[24] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[23] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[22] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[20] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[19] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[18] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[17] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[16] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[15] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[14] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[13] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[12] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[11] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[10] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[9]  ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[8]  ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[7]  ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[6]  ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[5]  ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[4]  ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[3]  ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[2]  ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[1]  ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[0]  ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[21] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-; FinalProject:comb_3|ClockDivider:comb_3|count[31] ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1.383             ;
-+---------------------------------------------------+----------------------------------------------+-------------------+
-Note: This table only shows the top 33 path(s) that have the largest delay added for hold.
++---------------------------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                                             ;
++-----------------------------------------------------+-------------------------------------------------+-------------------+
+; Source Register                                     ; Destination Register                            ; Delay Added in ns ;
++-----------------------------------------------------+-------------------------------------------------+-------------------+
+; FinalProject:comb_3|p1_score[0]                     ; FinalProject:comb_3|segmentDisplay:comb_14|f[4] ; 5.937             ;
+; FinalProject:comb_3|p2_score[0]                     ; FinalProject:comb_3|segmentDisplay:comb_14|a[4] ; 4.941             ;
+; FinalProject:comb_3|ClockDivider:comb_3|cout        ; FinalProject:comb_3|ClockDivider:comb_3|cout    ; 4.177             ;
+; FinalProject:comb_3|p2_score[31]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[30]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[29]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[28]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[27]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[26]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[25]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[24]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[23]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[22]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[21]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[20]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[19]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[18]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[17]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[16]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[15]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[14]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[13]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[12]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[11]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[10]                    ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[9]                     ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[8]                     ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[7]                     ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[6]                     ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[5]                     ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[4]                     ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[2]                     ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[3]                     ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p2_score[1]                     ; FinalProject:comb_3|p2_score[0]                 ; 3.360             ;
+; FinalProject:comb_3|p1_score[31]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[30]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[29]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[28]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[27]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[26]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[25]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[24]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[23]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[22]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[21]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[20]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[19]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[18]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[17]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[16]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[15]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[14]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[13]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[12]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[11]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[10]                    ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[9]                     ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[8]                     ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[7]                     ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[6]                     ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[5]                     ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[4]                     ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[3]                     ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[2]                     ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|p1_score[1]                     ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[30]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[29]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[28]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[27]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[26]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[25]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[23]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[22]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[21]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[20]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[19]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[18]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[17]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[16]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[15]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[14]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[13]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[12]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[11]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[10]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[9]           ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[8]           ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[7]           ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[6]           ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[5]           ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[4]           ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[3]           ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[2]           ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[1]           ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[0]           ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[24]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|Counter:comb_4|dec[31]          ; FinalProject:comb_3|p1_score[16]                ; 3.300             ;
+; FinalProject:comb_3|SW0_prev                        ; FinalProject:comb_3|p2_score[0]                 ; 1.994             ;
+; FinalProject:comb_3|Debouncer:comb_13|SW0_debounced ; FinalProject:comb_3|p2_score[0]                 ; 1.994             ;
+; FinalProject:comb_3|Counter:comb_4|ARDUINO[1]       ; FinalProject:comb_3|p1_score[16]                ; 1.677             ;
++-----------------------------------------------------+-------------------------------------------------+-------------------+
+Note: This table only shows the top 100 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -2171,6 +2290,7 @@ Info (12825): Data[1]/ASDO dual-purpose pin not reserved
 Info (12825): nCSO dual-purpose pin not reserved
 Info (12825): DCLK dual-purpose pin not reserved
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
+Warning (335093): The Timing Analyzer is analyzing 19 combinational loops as latches. For more details, run the Check Timing command in the Timing Analyzer or view the "User-Specified and Inferred Latches" table in the Analysis & Synthesis report.
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'FinalProject.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -2178,14 +2298,32 @@ Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Tim
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node MAX10_CLK1_50~input (placed in PIN P11 (CLK7p, DIFFIO_TX_RX_B20p, DIFFOUT_B20p, High_Speed)) File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 37
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G19
-Info (176353): Automatically promoted node FinalProject:comb_3|ClockDivider:comb_3|cout  File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 83
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
+        Info (176357): Destination node FinalProject:comb_3|p2_score[30] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
+        Info (176357): Destination node FinalProject:comb_3|p2_score[29] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
+        Info (176357): Destination node FinalProject:comb_3|p2_score[28] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
+        Info (176357): Destination node FinalProject:comb_3|p2_score[27] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
+        Info (176357): Destination node FinalProject:comb_3|p2_score[26] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
+        Info (176357): Destination node FinalProject:comb_3|p2_score[25] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
+        Info (176357): Destination node FinalProject:comb_3|p2_score[24] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
+        Info (176357): Destination node FinalProject:comb_3|p2_score[23] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
+        Info (176357): Destination node FinalProject:comb_3|p2_score[22] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
+        Info (176358): Non-global destination nodes limited to 10 nodes
+Info (176353): Automatically promoted node FinalProject:comb_3|ClockDivider:comb_3|cout  File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 91
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node FinalProject:comb_3|ClockDivider:comb_3|cout~0 File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 83
+        Info (176357): Destination node FinalProject:comb_3|ClockDivider:comb_3|cout~0 File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 91
+Info (176353): Automatically promoted node FinalProject:comb_3|segmentDisplay:comb_14|WideNor0~0  File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 167
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+Info (176353): Automatically promoted node FinalProject:comb_3|segmentDisplay:comb_14|WideNor1  File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 186
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node FinalProject:comb_3|segmentDisplay:comb_14|comb~0
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -2194,18 +2332,18 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:02
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X45_Y44 to location X55_Y54
+    Info (170196): Router estimated peak interconnect usage is 3% of the available device resources in the region that extends from location X45_Y44 to location X55_Y54
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.34 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.45 seconds.
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169177): 88 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 2.5-V interfaces. For more information, refer to AN 447: Interfacing MAX 10 Devices with 3.3/3.0/2.5-V LVTTL/LVCMOS I/O Systems.
     Info (169178): Pin ADC_CLK_10 uses I/O standard 3.3-V LVTTL at N5 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 33
     Info (169178): Pin MAX10_CLK2_50 uses I/O standard 3.3-V LVTTL at N14 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 41
@@ -2237,9 +2375,6 @@ Warning (169177): 88 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 
     Info (169178): Pin DRAM_DQ[15] uses I/O standard 3.3-V LVTTL at F22 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 52
     Info (169178): Pin GSENSOR_SDI uses I/O standard 3.3-V LVTTL at V11 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 108
     Info (169178): Pin GSENSOR_SDO uses I/O standard 3.3-V LVTTL at V12 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 109
-    Info (169178): Pin ARDUINO_IO[0] uses I/O standard 3.3-V LVTTL at AB5 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[1] uses I/O standard 3.3-V LVTTL at AB6 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
-    Info (169178): Pin ARDUINO_IO[2] uses I/O standard 3.3-V LVTTL at AB7 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Info (169178): Pin ARDUINO_IO[3] uses I/O standard 3.3-V LVTTL at AB8 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Info (169178): Pin ARDUINO_IO[4] uses I/O standard 3.3-V LVTTL at AB9 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Info (169178): Pin ARDUINO_IO[5] uses I/O standard 3.3-V LVTTL at Y10 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
@@ -2290,6 +2425,9 @@ Warning (169177): 88 pins must meet Intel FPGA requirements for 3.3-, 3.0-, and 
     Info (169178): Pin GPIO[33] uses I/O standard 3.3-V LVTTL at Y3 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 122
     Info (169178): Pin GPIO[34] uses I/O standard 3.3-V LVTTL at AB2 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 122
     Info (169178): Pin GPIO[35] uses I/O standard 3.3-V LVTTL at AA2 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 122
+    Info (169178): Pin ARDUINO_IO[0] uses I/O standard 3.3-V LVTTL at AB5 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[1] uses I/O standard 3.3-V LVTTL at AB6 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
+    Info (169178): Pin ARDUINO_IO[2] uses I/O standard 3.3-V LVTTL at AB7 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Info (169178): Pin MAX10_CLK1_50 uses I/O standard 3.3-V LVTTL at P11 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 37
     Info (169178): Pin KEY[0] uses I/O standard 3.3 V Schmitt Trigger at B8 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 81
     Info (169178): Pin KEY[1] uses I/O standard 3.3 V Schmitt Trigger at A7 File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 81
@@ -2314,9 +2452,6 @@ Warning (169064): Following 71 pins have no output enable or a GND or VCC output
     Info (169065): Pin DRAM_DQ[15] has a permanently disabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 52
     Info (169065): Pin GSENSOR_SDI has a permanently disabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 108
     Info (169065): Pin GSENSOR_SDO has a permanently disabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 109
-    Info (169065): Pin ARDUINO_IO[0] has a permanently disabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[1] has a permanently disabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
-    Info (169065): Pin ARDUINO_IO[2] has a permanently disabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Info (169065): Pin ARDUINO_IO[3] has a permanently disabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Info (169065): Pin ARDUINO_IO[4] has a permanently disabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Info (169065): Pin ARDUINO_IO[5] has a permanently disabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
@@ -2367,12 +2502,15 @@ Warning (169064): Following 71 pins have no output enable or a GND or VCC output
     Info (169065): Pin GPIO[33] has a permanently disabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 122
     Info (169065): Pin GPIO[34] has a permanently disabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 122
     Info (169065): Pin GPIO[35] has a permanently disabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 122
+    Info (169065): Pin ARDUINO_IO[0] has a permanently enabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[1] has a permanently enabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
+    Info (169065): Pin ARDUINO_IO[2] has a permanently enabled output enable File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
 Info (144001): Generated suppressed messages file E:/quartus-lite/Labs/FinalProj/output_files/FinalProject.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 8 warnings
+Info: Quartus Prime Fitter was successful. 0 errors, 9 warnings
     Info: Peak virtual memory: 6240 megabytes
-    Info: Processing ended: Wed Nov 29 20:27:02 2023
-    Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Processing ended: Thu Nov 30 16:44:55 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +----------------------------+
