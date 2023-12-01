@@ -172,7 +172,6 @@ module Counter(clk,reset,dec,lock,LEDR,set_idle,in_progress,in_idle,ARDUINO[2:0]
 	assign ARDUINO[1] = in_progress;
 endmodule
 
-//Module used to handle displaying score + win message on 7 segment displays
 module segmentDisplay(p2, p1, HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0],HEX4[7:0],HEX5[7:0]);
 	input [31:0] p1, p2;
 	reg [7:0] a, b, c, d, e, f;
@@ -180,49 +179,8 @@ module segmentDisplay(p2, p1, HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0],HEX4[7:0],
 	
 	always @(p1,p2)
 	begin
-		if (p1 < 32'd5 && p2 < 32'd5) begin
-			// display first player's score
-			case(p1)
-				32'd0: begin
-					a = 8'b11000000;
-				end
-				32'd1: begin
-					a = 8'b11111001;
-				end
-				32'd2: begin
-					a = 8'b10100100;
-				end
-				32'd3: begin
-					a = 8'b10110000;
-				end
-				32'd4: begin
-					a = 8'b10011001;
-				end
-			endcase
-			b = 8'b10111111; // display '-' for second character
-			// display second player's score
-			case(p2)
-				32'd0: begin
-					f = 8'b11000000;
-				end
-				32'd1: begin
-					f = 8'b11111001;
-				end
-				32'd2: begin
-					f = 8'b10100100;
-				end
-				32'd3: begin
-					f = 8'b10110000;
-				end
-				32'd4: begin
-					f = 8'b10011001;
-				end
-			endcase
-			b = 8'b10111111;
-			c = 8'b10111111;
-			d = 8'b10111111;
-			e = 8'b10111111;
-		end else begin // one of the players has won
+		if (p1 >= 32'd5 or p2 >= 32'd5) begin // one of the players has won
+			winner = 1;
 			a = 8'b10001100; // display "P"
 			c = 8'b11000001; // display "V"
 			d = 8'b11111001; // display "I"
@@ -233,8 +191,70 @@ module segmentDisplay(p2, p1, HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0],HEX4[7:0],
 			end else if (p2 == 32'd5) begin
 				b = 8'b10100100; // display "2" for p2
 			end
+		end else begin // no winner yet, display the score
+			// display first player's score
+			case(p1)
+				32'd0: begin
+					a = 7'b1000000;
+				end
+				32'd1: begin
+					a = 7'b1111001;
+				end
+				32'd2: begin
+					a = 7'b0100100;
+				end
+				32'd3: begin
+					a = 7'b0110000;
+				end
+				32'd4: begin
+					a = 7'b0011001;
+				end
+			endcase
+			// display second player's score
+			case(p2)
+				32'd0: begin
+					f = 7'b1000000;
+				end
+				32'd1: begin
+					f = 7'b1111001;
+				end
+				32'd2: begin
+					f = 7'b0100100;
+				end
+				32'd3: begin
+					f = 7'b0110000;
+				end
+				32'd4: begin
+					f = 7'b0011001;
+				end
+			endcase
+			// display '-' for characters 2-5 to separate the scores
+			b = 8'b10111111;
+			c = 8'b10111111;
+			d = 8'b10111111;
+			e = 8'b10111111;
+			winner = 0;
 		end
 	end
+	
+	// used to toggle the decimal for p1 or p2 depending on if their score changed
+	always @(posedge clk)
+	begin
+		if(p1_change)
+		begin
+			decimal_f = ~decimal_f;
+			decimal_a = 1;
+		end else if(p2_change)
+		begin
+			decimal_a = ~decimal_a;
+			decimal_f = 1;
+		end else begin
+			decimal_a = 1;
+			decimal_f = 1;
+		end
+	end
+	
+	// segment display for HEX5
 	assign HEX5[0] = a[0];
 	assign HEX5[1] = a[1];
 	assign HEX5[2] = a[2];
@@ -242,8 +262,9 @@ module segmentDisplay(p2, p1, HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0],HEX4[7:0],
 	assign HEX5[4] = a[4];
 	assign HEX5[5] = a[5];
 	assign HEX5[6] = a[6];
-	assign HEX5[7] = a[7];
+	assign HEX5[7] = decimal_a; // turns on or off depending on if p1 got or lost a point
 	
+	// segment display for HEX4
 	assign HEX4[0] = b[0];
 	assign HEX4[1] = b[1];
 	assign HEX4[2] = b[2];
@@ -253,6 +274,7 @@ module segmentDisplay(p2, p1, HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0],HEX4[7:0],
 	assign HEX4[6] = b[6];
 	assign HEX4[7] = b[7];
 	
+	// segment display for HEX3
 	assign HEX3[0] = c[0];
 	assign HEX3[1] = c[1];
 	assign HEX3[2] = c[2];
@@ -262,6 +284,7 @@ module segmentDisplay(p2, p1, HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0],HEX4[7:0],
 	assign HEX3[6] = c[6];
 	assign HEX3[7] = c[7];
 
+	// segment display for HEX2
 	assign HEX2[0] = d[0];
 	assign HEX2[1] = d[1];
 	assign HEX2[2] = d[2];
@@ -271,6 +294,7 @@ module segmentDisplay(p2, p1, HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0],HEX4[7:0],
 	assign HEX2[6] = d[6];
 	assign HEX2[7] = d[7];
 
+	// segment display for HEX1
 	assign HEX1[0] = e[0];
 	assign HEX1[1] = e[1];
 	assign HEX1[2] = e[2];
@@ -280,6 +304,7 @@ module segmentDisplay(p2, p1, HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0],HEX4[7:0],
 	assign HEX1[6] = e[6];
 	assign HEX1[7] = e[7];
 
+	// segment display for HEX0
 	assign HEX0[0] = f[0];
 	assign HEX0[1] = f[1];
 	assign HEX0[2] = f[2];
@@ -287,6 +312,6 @@ module segmentDisplay(p2, p1, HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0],HEX4[7:0],
 	assign HEX0[4] = f[4];
 	assign HEX0[5] = f[5];
 	assign HEX0[6] = f[6];
-	assign HEX0[7] = 1;
+	assign HEX0[7] = decimal_f; // turns on or off depending on if p2 got or lost a point
 
 endmodule
