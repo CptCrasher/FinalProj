@@ -1,5 +1,5 @@
 Timing Analyzer report for FinalProject
-Thu Nov 30 16:45:00 2023
+Fri Dec  1 00:40:34 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -94,65 +94,69 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 12          ;
 ;                            ;             ;
-; Average used               ; 1.26        ;
+; Average used               ; 1.41        ;
 ; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.9%      ;
-;     Processor 3            ;   2.8%      ;
-;     Processor 4            ;   2.8%      ;
-;     Processors 5-12        ;   2.2%      ;
+;     Processor 2            ;   4.3%      ;
+;     Processor 3            ;   4.2%      ;
+;     Processor 4            ;   4.2%      ;
+;     Processors 5-12        ;   3.6%      ;
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clocks                                                                                                                                                                                                                                                     ;
-+----------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------+
-; Clock Name                                   ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                          ;
-+----------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------+
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FinalProject:comb_3|ClockDivider:comb_3|cout } ;
-; FinalProject:comb_3|p1_score[0]              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FinalProject:comb_3|p1_score[0] }              ;
-; FinalProject:comb_3|p2_score[0]              ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FinalProject:comb_3|p2_score[0] }              ;
-; MAX10_CLK1_50                                ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { MAX10_CLK1_50 }                                ;
-+----------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                                                         ;
++--------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------------------------------+
+; Clock Name                                             ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                                    ;
++--------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------------------------------+
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FinalProject:comb_3|ClockDivider:comb_3|cout }           ;
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle } ;
+; FinalProject:comb_3|p1_score[0]                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FinalProject:comb_3|p1_score[0] }                        ;
+; FinalProject:comb_3|p2_score[0]                        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { FinalProject:comb_3|p2_score[0] }                        ;
+; MAX10_CLK1_50                                          ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { MAX10_CLK1_50 }                                          ;
++--------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                 ;
-+------------+-----------------+----------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                   ; Note ;
-+------------+-----------------+----------------------------------------------+------+
-; 140.06 MHz ; 140.06 MHz      ; MAX10_CLK1_50                                ;      ;
-; 154.27 MHz ; 154.27 MHz      ; FinalProject:comb_3|p1_score[0]              ;      ;
-; 156.45 MHz ; 156.45 MHz      ; FinalProject:comb_3|p2_score[0]              ;      ;
-; 235.35 MHz ; 235.35 MHz      ; FinalProject:comb_3|ClockDivider:comb_3|cout ;      ;
-+------------+-----------------+----------------------------------------------+------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                                      ;
++-------------+-----------------+--------------------------------------------------------+------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name                                             ; Note                                           ;
++-------------+-----------------+--------------------------------------------------------+------------------------------------------------+
+; 151.54 MHz  ; 151.54 MHz      ; MAX10_CLK1_50                                          ;                                                ;
+; 170.71 MHz  ; 170.71 MHz      ; FinalProject:comb_3|p2_score[0]                        ;                                                ;
+; 171.35 MHz  ; 171.35 MHz      ; FinalProject:comb_3|p1_score[0]                        ;                                                ;
+; 177.09 MHz  ; 177.09 MHz      ; FinalProject:comb_3|ClockDivider:comb_3|cout           ;                                                ;
+; 1400.56 MHz ; 450.05 MHz      ; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; limit due to minimum period restriction (tmin) ;
++-------------+-----------------+--------------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-----------------------------------------------------------------------+
-; Slow 1200mV 85C Model Setup Summary                                   ;
-+----------------------------------------------+--------+---------------+
-; Clock                                        ; Slack  ; End Point TNS ;
-+----------------------------------------------+--------+---------------+
-; MAX10_CLK1_50                                ; -6.140 ; -574.542      ;
-; FinalProject:comb_3|p2_score[0]              ; -5.036 ; -27.832       ;
-; FinalProject:comb_3|p1_score[0]              ; -4.462 ; -25.521       ;
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; -3.249 ; -86.758       ;
-+----------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                                             ;
++--------------------------------------------------------+--------+---------------+
+; Clock                                                  ; Slack  ; End Point TNS ;
++--------------------------------------------------------+--------+---------------+
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; -5.756 ; -272.488      ;
+; MAX10_CLK1_50                                          ; -5.599 ; -644.083      ;
+; FinalProject:comb_3|p1_score[0]                        ; -4.601 ; -23.811       ;
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; -4.190 ; -7.163        ;
+; FinalProject:comb_3|p2_score[0]                        ; -3.900 ; -21.788       ;
++--------------------------------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------------------+
-; Slow 1200mV 85C Model Hold Summary                                    ;
-+----------------------------------------------+--------+---------------+
-; Clock                                        ; Slack  ; End Point TNS ;
-+----------------------------------------------+--------+---------------+
-; MAX10_CLK1_50                                ; -1.638 ; -41.518       ;
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; 0.805  ; 0.000         ;
-; FinalProject:comb_3|p2_score[0]              ; 1.283  ; 0.000         ;
-; FinalProject:comb_3|p1_score[0]              ; 1.339  ; 0.000         ;
-+----------------------------------------------+--------+---------------+
++--------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                                             ;
++--------------------------------------------------------+-------+---------------+
+; Clock                                                  ; Slack ; End Point TNS ;
++--------------------------------------------------------+-------+---------------+
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; 0.014 ; 0.000         ;
+; MAX10_CLK1_50                                          ; 0.331 ; 0.000         ;
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; 0.343 ; 0.000         ;
+; FinalProject:comb_3|p2_score[0]                        ; 0.568 ; 0.000         ;
+; FinalProject:comb_3|p1_score[0]                        ; 1.004 ; 0.000         ;
++--------------------------------------------------------+-------+---------------+
 
 
 +----------------------------------------------------------+
@@ -160,8 +164,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; FinalProject:comb_3|p2_score[0] ; -4.954 ; -27.257       ;
-; FinalProject:comb_3|p1_score[0] ; -4.417 ; -25.737       ;
+; FinalProject:comb_3|p2_score[0] ; -6.158 ; -34.643       ;
+; FinalProject:comb_3|p1_score[0] ; -5.683 ; -31.904       ;
 +---------------------------------+--------+---------------+
 
 
@@ -170,21 +174,22 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------+-------+---------------+
 ; Clock                           ; Slack ; End Point TNS ;
 +---------------------------------+-------+---------------+
-; FinalProject:comb_3|p1_score[0] ; 1.318 ; 0.000         ;
-; FinalProject:comb_3|p2_score[0] ; 1.514 ; 0.000         ;
+; FinalProject:comb_3|p2_score[0] ; 1.542 ; 0.000         ;
+; FinalProject:comb_3|p1_score[0] ; 1.552 ; 0.000         ;
 +---------------------------------+-------+---------------+
 
 
-+-----------------------------------------------------------------------+
-; Slow 1200mV 85C Model Minimum Pulse Width Summary                     ;
-+----------------------------------------------+--------+---------------+
-; Clock                                        ; Slack  ; End Point TNS ;
-+----------------------------------------------+--------+---------------+
-; MAX10_CLK1_50                                ; -3.000 ; -166.748      ;
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; -1.222 ; -41.548       ;
-; FinalProject:comb_3|p1_score[0]              ; 0.419  ; 0.000         ;
-; FinalProject:comb_3|p2_score[0]              ; 0.424  ; 0.000         ;
-+----------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary                               ;
++--------------------------------------------------------+--------+---------------+
+; Clock                                                  ; Slack  ; End Point TNS ;
++--------------------------------------------------------+--------+---------------+
+; MAX10_CLK1_50                                          ; -3.000 ; -209.518      ;
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; -1.222 ; -127.088      ;
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; -1.222 ; -2.444        ;
+; FinalProject:comb_3|p1_score[0]                        ; 0.408  ; 0.000         ;
+; FinalProject:comb_3|p2_score[0]                        ; 0.432  ; 0.000         ;
++--------------------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
@@ -193,41 +198,44 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 No synchronizer chains to report.
 
 
-+------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                  ;
-+------------+-----------------+----------------------------------------------+------+
-; Fmax       ; Restricted Fmax ; Clock Name                                   ; Note ;
-+------------+-----------------+----------------------------------------------+------+
-; 154.49 MHz ; 154.49 MHz      ; MAX10_CLK1_50                                ;      ;
-; 170.94 MHz ; 170.94 MHz      ; FinalProject:comb_3|p1_score[0]              ;      ;
-; 172.89 MHz ; 172.89 MHz      ; FinalProject:comb_3|p2_score[0]              ;      ;
-; 258.4 MHz  ; 258.4 MHz       ; FinalProject:comb_3|ClockDivider:comb_3|cout ;      ;
-+------------+-----------------+----------------------------------------------+------+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                                       ;
++-------------+-----------------+--------------------------------------------------------+------------------------------------------------+
+; Fmax        ; Restricted Fmax ; Clock Name                                             ; Note                                           ;
++-------------+-----------------+--------------------------------------------------------+------------------------------------------------+
+; 166.97 MHz  ; 166.97 MHz      ; MAX10_CLK1_50                                          ;                                                ;
+; 188.89 MHz  ; 188.89 MHz      ; FinalProject:comb_3|p2_score[0]                        ;                                                ;
+; 190.4 MHz   ; 190.4 MHz       ; FinalProject:comb_3|p1_score[0]                        ;                                                ;
+; 193.54 MHz  ; 193.54 MHz      ; FinalProject:comb_3|ClockDivider:comb_3|cout           ;                                                ;
+; 1531.39 MHz ; 450.05 MHz      ; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; limit due to minimum period restriction (tmin) ;
++-------------+-----------------+--------------------------------------------------------+------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
-+-----------------------------------------------------------------------+
-; Slow 1200mV 0C Model Setup Summary                                    ;
-+----------------------------------------------+--------+---------------+
-; Clock                                        ; Slack  ; End Point TNS ;
-+----------------------------------------------+--------+---------------+
-; MAX10_CLK1_50                                ; -5.473 ; -513.657      ;
-; FinalProject:comb_3|p2_score[0]              ; -4.481 ; -24.783       ;
-; FinalProject:comb_3|p1_score[0]              ; -3.990 ; -22.859       ;
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; -2.870 ; -76.472       ;
-+----------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                                              ;
++--------------------------------------------------------+--------+---------------+
+; Clock                                                  ; Slack  ; End Point TNS ;
++--------------------------------------------------------+--------+---------------+
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; -5.111 ; -239.565      ;
+; MAX10_CLK1_50                                          ; -4.989 ; -574.031      ;
+; FinalProject:comb_3|p1_score[0]                        ; -4.123 ; -21.332       ;
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; -3.671 ; -6.244        ;
+; FinalProject:comb_3|p2_score[0]                        ; -3.455 ; -19.445       ;
++--------------------------------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------------------+
-; Slow 1200mV 0C Model Hold Summary                                     ;
-+----------------------------------------------+--------+---------------+
-; Clock                                        ; Slack  ; End Point TNS ;
-+----------------------------------------------+--------+---------------+
-; MAX10_CLK1_50                                ; -1.507 ; -36.600       ;
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; 0.736  ; 0.000         ;
-; FinalProject:comb_3|p2_score[0]              ; 1.169  ; 0.000         ;
-; FinalProject:comb_3|p1_score[0]              ; 1.280  ; 0.000         ;
-+----------------------------------------------+--------+---------------+
++--------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                                              ;
++--------------------------------------------------------+-------+---------------+
+; Clock                                                  ; Slack ; End Point TNS ;
++--------------------------------------------------------+-------+---------------+
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; 0.030 ; 0.000         ;
+; MAX10_CLK1_50                                          ; 0.300 ; 0.000         ;
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; 0.312 ; 0.000         ;
+; FinalProject:comb_3|p2_score[0]                        ; 0.554 ; 0.000         ;
+; FinalProject:comb_3|p1_score[0]                        ; 0.935 ; 0.000         ;
++--------------------------------------------------------+-------+---------------+
 
 
 +----------------------------------------------------------+
@@ -235,8 +243,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; FinalProject:comb_3|p2_score[0] ; -4.461 ; -24.589       ;
-; FinalProject:comb_3|p1_score[0] ; -3.971 ; -23.103       ;
+; FinalProject:comb_3|p2_score[0] ; -5.472 ; -30.793       ;
+; FinalProject:comb_3|p1_score[0] ; -5.046 ; -28.337       ;
 +---------------------------------+--------+---------------+
 
 
@@ -245,21 +253,22 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------------------+-------+---------------+
 ; Clock                           ; Slack ; End Point TNS ;
 +---------------------------------+-------+---------------+
-; FinalProject:comb_3|p1_score[0] ; 1.193 ; 0.000         ;
-; FinalProject:comb_3|p2_score[0] ; 1.376 ; 0.000         ;
+; FinalProject:comb_3|p2_score[0] ; 1.496 ; 0.000         ;
+; FinalProject:comb_3|p1_score[0] ; 1.509 ; 0.000         ;
 +---------------------------------+-------+---------------+
 
 
-+-----------------------------------------------------------------------+
-; Slow 1200mV 0C Model Minimum Pulse Width Summary                      ;
-+----------------------------------------------+--------+---------------+
-; Clock                                        ; Slack  ; End Point TNS ;
-+----------------------------------------------+--------+---------------+
-; MAX10_CLK1_50                                ; -3.000 ; -166.748      ;
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; -1.222 ; -41.548       ;
-; FinalProject:comb_3|p2_score[0]              ; 0.446  ; 0.000         ;
-; FinalProject:comb_3|p1_score[0]              ; 0.454  ; 0.000         ;
-+----------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary                                ;
++--------------------------------------------------------+--------+---------------+
+; Clock                                                  ; Slack  ; End Point TNS ;
++--------------------------------------------------------+--------+---------------+
+; MAX10_CLK1_50                                          ; -3.000 ; -209.518      ;
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; -1.222 ; -127.088      ;
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; -1.222 ; -2.444        ;
+; FinalProject:comb_3|p1_score[0]                        ; 0.420  ; 0.000         ;
+; FinalProject:comb_3|p2_score[0]                        ; 0.455  ; 0.000         ;
++--------------------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -268,28 +277,30 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 No synchronizer chains to report.
 
 
-+-----------------------------------------------------------------------+
-; Fast 1200mV 0C Model Setup Summary                                    ;
-+----------------------------------------------+--------+---------------+
-; Clock                                        ; Slack  ; End Point TNS ;
-+----------------------------------------------+--------+---------------+
-; MAX10_CLK1_50                                ; -2.421 ; -204.786      ;
-; FinalProject:comb_3|p2_score[0]              ; -1.862 ; -9.952        ;
-; FinalProject:comb_3|p1_score[0]              ; -1.517 ; -8.372        ;
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; -1.034 ; -24.293       ;
-+----------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                                              ;
++--------------------------------------------------------+--------+---------------+
+; Clock                                                  ; Slack  ; End Point TNS ;
++--------------------------------------------------------+--------+---------------+
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; -2.347 ; -76.599       ;
+; MAX10_CLK1_50                                          ; -2.219 ; -219.842      ;
+; FinalProject:comb_3|p1_score[0]                        ; -1.635 ; -8.039        ;
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; -1.558 ; -2.485        ;
+; FinalProject:comb_3|p2_score[0]                        ; -1.303 ; -6.967        ;
++--------------------------------------------------------+--------+---------------+
 
 
-+-----------------------------------------------------------------------+
-; Fast 1200mV 0C Model Hold Summary                                     ;
-+----------------------------------------------+--------+---------------+
-; Clock                                        ; Slack  ; End Point TNS ;
-+----------------------------------------------+--------+---------------+
-; MAX10_CLK1_50                                ; -0.908 ; -27.083       ;
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; 0.286  ; 0.000         ;
-; FinalProject:comb_3|p2_score[0]              ; 0.499  ; 0.000         ;
-; FinalProject:comb_3|p1_score[0]              ; 0.535  ; 0.000         ;
-+----------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                                               ;
++--------------------------------------------------------+--------+---------------+
+; Clock                                                  ; Slack  ; End Point TNS ;
++--------------------------------------------------------+--------+---------------+
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; -0.109 ; -0.109        ;
+; MAX10_CLK1_50                                          ; 0.152  ; 0.000         ;
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; 0.156  ; 0.000         ;
+; FinalProject:comb_3|p2_score[0]                        ; 0.244  ; 0.000         ;
+; FinalProject:comb_3|p1_score[0]                        ; 0.429  ; 0.000         ;
++--------------------------------------------------------+--------+---------------+
 
 
 +----------------------------------------------------------+
@@ -297,8 +308,8 @@ No synchronizer chains to report.
 +---------------------------------+--------+---------------+
 ; Clock                           ; Slack  ; End Point TNS ;
 +---------------------------------+--------+---------------+
-; FinalProject:comb_3|p2_score[0] ; -1.885 ; -9.921        ;
-; FinalProject:comb_3|p1_score[0] ; -1.583 ; -9.069        ;
+; FinalProject:comb_3|p2_score[0] ; -2.631 ; -14.605       ;
+; FinalProject:comb_3|p1_score[0] ; -2.283 ; -12.582       ;
 +---------------------------------+--------+---------------+
 
 
@@ -307,21 +318,22 @@ No synchronizer chains to report.
 +---------------------------------+-------+---------------+
 ; Clock                           ; Slack ; End Point TNS ;
 +---------------------------------+-------+---------------+
-; FinalProject:comb_3|p1_score[0] ; 0.531 ; 0.000         ;
-; FinalProject:comb_3|p2_score[0] ; 0.646 ; 0.000         ;
+; FinalProject:comb_3|p1_score[0] ; 0.580 ; 0.000         ;
+; FinalProject:comb_3|p2_score[0] ; 0.613 ; 0.000         ;
 +---------------------------------+-------+---------------+
 
 
-+-----------------------------------------------------------------------+
-; Fast 1200mV 0C Model Minimum Pulse Width Summary                      ;
-+----------------------------------------------+--------+---------------+
-; Clock                                        ; Slack  ; End Point TNS ;
-+----------------------------------------------+--------+---------------+
-; MAX10_CLK1_50                                ; -3.000 ; -151.820      ;
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; -1.000 ; -34.000       ;
-; FinalProject:comb_3|p1_score[0]              ; 0.431  ; 0.000         ;
-; FinalProject:comb_3|p2_score[0]              ; 0.434  ; 0.000         ;
-+----------------------------------------------+--------+---------------+
++---------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary                                ;
++--------------------------------------------------------+--------+---------------+
+; Clock                                                  ; Slack  ; End Point TNS ;
++--------------------------------------------------------+--------+---------------+
+; MAX10_CLK1_50                                          ; -3.000 ; -194.703      ;
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; -1.000 ; -104.000      ;
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; -1.000 ; -2.000        ;
+; FinalProject:comb_3|p1_score[0]                        ; 0.423  ; 0.000         ;
+; FinalProject:comb_3|p2_score[0]                        ; 0.427  ; 0.000         ;
++--------------------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
@@ -330,22 +342,24 @@ No synchronizer chains to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; Multicorner Timing Analysis Summary                                                                           ;
-+-----------------------------------------------+----------+---------+----------+---------+---------------------+
-; Clock                                         ; Setup    ; Hold    ; Recovery ; Removal ; Minimum Pulse Width ;
-+-----------------------------------------------+----------+---------+----------+---------+---------------------+
-; Worst-case Slack                              ; -6.140   ; -1.638  ; -4.954   ; 0.531   ; -3.000              ;
-;  FinalProject:comb_3|ClockDivider:comb_3|cout ; -3.249   ; 0.286   ; N/A      ; N/A     ; -1.222              ;
-;  FinalProject:comb_3|p1_score[0]              ; -4.462   ; 0.535   ; -4.417   ; 0.531   ; 0.419               ;
-;  FinalProject:comb_3|p2_score[0]              ; -5.036   ; 0.499   ; -4.954   ; 0.646   ; 0.424               ;
-;  MAX10_CLK1_50                                ; -6.140   ; -1.638  ; N/A      ; N/A     ; -3.000              ;
-; Design-wide TNS                               ; -714.653 ; -41.518 ; -52.994  ; 0.0     ; -208.296            ;
-;  FinalProject:comb_3|ClockDivider:comb_3|cout ; -86.758  ; 0.000   ; N/A      ; N/A     ; -41.548             ;
-;  FinalProject:comb_3|p1_score[0]              ; -25.521  ; 0.000   ; -25.737  ; 0.000   ; 0.000               ;
-;  FinalProject:comb_3|p2_score[0]              ; -27.832  ; 0.000   ; -27.257  ; 0.000   ; 0.000               ;
-;  MAX10_CLK1_50                                ; -574.542 ; -41.518 ; N/A      ; N/A     ; -166.748            ;
-+-----------------------------------------------+----------+---------+----------+---------+---------------------+
++------------------------------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                                    ;
++---------------------------------------------------------+----------+--------+----------+---------+---------------------+
+; Clock                                                   ; Setup    ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++---------------------------------------------------------+----------+--------+----------+---------+---------------------+
+; Worst-case Slack                                        ; -5.756   ; -0.109 ; -6.158   ; 0.580   ; -3.000              ;
+;  FinalProject:comb_3|ClockDivider:comb_3|cout           ; -5.756   ; 0.156  ; N/A      ; N/A     ; -1.222              ;
+;  FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; -4.190   ; -0.109 ; N/A      ; N/A     ; -1.222              ;
+;  FinalProject:comb_3|p1_score[0]                        ; -4.601   ; 0.429  ; -5.683   ; 0.580   ; 0.408               ;
+;  FinalProject:comb_3|p2_score[0]                        ; -3.900   ; 0.244  ; -6.158   ; 0.613   ; 0.427               ;
+;  MAX10_CLK1_50                                          ; -5.599   ; 0.152  ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS                                         ; -969.333 ; -0.109 ; -66.547  ; 0.0     ; -339.05             ;
+;  FinalProject:comb_3|ClockDivider:comb_3|cout           ; -272.488 ; 0.000  ; N/A      ; N/A     ; -127.088            ;
+;  FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; -7.163   ; -0.109 ; N/A      ; N/A     ; -2.444              ;
+;  FinalProject:comb_3|p1_score[0]                        ; -23.811  ; 0.000  ; -31.904  ; 0.000   ; 0.000               ;
+;  FinalProject:comb_3|p2_score[0]                        ; -21.788  ; 0.000  ; -34.643  ; 0.000   ; 0.000               ;
+;  MAX10_CLK1_50                                          ; -644.083 ; 0.000  ; N/A      ; N/A     ; -209.518            ;
++---------------------------------------------------------+----------+--------+----------+---------+---------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -468,7 +482,6 @@ No synchronizer chains to report.
 ; DRAM_DQ[15]     ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; GSENSOR_SDI     ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; GSENSOR_SDO     ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
-; ARDUINO_IO[3]   ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[4]   ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[5]   ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[6]   ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
@@ -521,6 +534,7 @@ No synchronizer chains to report.
 ; ARDUINO_IO[0]   ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[1]   ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ARDUINO_IO[2]   ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ARDUINO_IO[3]   ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 ; ~ALTERA_TDO~    ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
 +-----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
 
@@ -560,7 +574,6 @@ No synchronizer chains to report.
 ; DRAM_DQ[15]         ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; GSENSOR_SDI         ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; GSENSOR_SDO         ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
-; ARDUINO_IO[3]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[4]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[5]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[6]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
@@ -613,6 +626,7 @@ No synchronizer chains to report.
 ; ARDUINO_IO[0]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[1]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; ARDUINO_IO[2]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
+; ARDUINO_IO[3]       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; MAX10_CLK1_50       ; 3.3-V LVTTL           ; 2640 ps         ; 2640 ps         ;
 ; KEY[0]              ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
 ; KEY[1]              ; 3.3 V Schmitt Trigger ; 2640 ps         ; 2640 ps         ;
@@ -748,7 +762,6 @@ No synchronizer chains to report.
 ; DRAM_DQ[15]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.27e-08 V                   ; 3.23 V              ; -0.106 V            ; 0.46 V                               ; 0.281 V                              ; 3.06e-10 s                  ; 4.34e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.27e-08 V                  ; 3.23 V             ; -0.106 V           ; 0.46 V                              ; 0.281 V                             ; 3.06e-10 s                 ; 4.34e-10 s                 ; No                        ; Yes                       ;
 ; GSENSOR_SDI     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.27e-08 V                   ; 3.22 V              ; -0.0937 V           ; 0.265 V                              ; 0.351 V                              ; 4.55e-10 s                  ; 4.64e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 5.27e-08 V                  ; 3.22 V             ; -0.0937 V          ; 0.265 V                             ; 0.351 V                             ; 4.55e-10 s                 ; 4.64e-10 s                 ; No                        ; No                        ;
 ; GSENSOR_SDO     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.27e-08 V                   ; 3.22 V              ; -0.0943 V           ; 0.264 V                              ; 0.35 V                               ; 4.56e-10 s                  ; 4.63e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 5.27e-08 V                  ; 3.22 V             ; -0.0943 V          ; 0.264 V                             ; 0.35 V                              ; 4.56e-10 s                 ; 4.63e-10 s                 ; No                        ; No                        ;
-; ARDUINO_IO[3]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.27e-08 V                   ; 3.23 V              ; -0.107 V            ; 0.46 V                               ; 0.279 V                              ; 3.06e-10 s                  ; 4.34e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.27e-08 V                  ; 3.23 V             ; -0.107 V           ; 0.46 V                              ; 0.279 V                             ; 3.06e-10 s                 ; 4.34e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[4]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.27e-08 V                   ; 3.23 V              ; -0.107 V            ; 0.46 V                               ; 0.279 V                              ; 3.06e-10 s                  ; 4.34e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.27e-08 V                  ; 3.23 V             ; -0.107 V           ; 0.46 V                              ; 0.279 V                             ; 3.06e-10 s                 ; 4.34e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[5]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.27e-08 V                   ; 3.22 V              ; -0.0937 V           ; 0.265 V                              ; 0.351 V                              ; 4.55e-10 s                  ; 4.64e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 5.27e-08 V                  ; 3.22 V             ; -0.0937 V          ; 0.265 V                             ; 0.351 V                             ; 4.55e-10 s                 ; 4.64e-10 s                 ; No                        ; No                        ;
 ; ARDUINO_IO[6]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.27e-08 V                   ; 3.22 V              ; -0.0937 V           ; 0.265 V                              ; 0.351 V                              ; 4.55e-10 s                  ; 4.64e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 5.27e-08 V                  ; 3.22 V             ; -0.0937 V          ; 0.265 V                             ; 0.351 V                             ; 4.55e-10 s                 ; 4.64e-10 s                 ; No                        ; No                        ;
@@ -801,6 +814,7 @@ No synchronizer chains to report.
 ; ARDUINO_IO[0]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.27e-08 V                   ; 3.23 V              ; -0.107 V            ; 0.46 V                               ; 0.279 V                              ; 3.06e-10 s                  ; 4.34e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.27e-08 V                  ; 3.23 V             ; -0.107 V           ; 0.46 V                              ; 0.279 V                             ; 3.06e-10 s                 ; 4.34e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[1]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.27e-08 V                   ; 3.23 V              ; -0.106 V            ; 0.46 V                               ; 0.281 V                              ; 3.06e-10 s                  ; 4.34e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.27e-08 V                  ; 3.23 V             ; -0.106 V           ; 0.46 V                              ; 0.281 V                             ; 3.06e-10 s                 ; 4.34e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[2]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.27e-08 V                   ; 3.23 V              ; -0.107 V            ; 0.46 V                               ; 0.279 V                              ; 3.06e-10 s                  ; 4.34e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.27e-08 V                  ; 3.23 V             ; -0.107 V           ; 0.46 V                              ; 0.279 V                             ; 3.06e-10 s                 ; 4.34e-10 s                 ; No                        ; Yes                       ;
+; ARDUINO_IO[3]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.27e-08 V                   ; 3.23 V              ; -0.107 V            ; 0.46 V                               ; 0.279 V                              ; 3.06e-10 s                  ; 4.34e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.27e-08 V                  ; 3.23 V             ; -0.107 V           ; 0.46 V                              ; 0.279 V                             ; 3.06e-10 s                 ; 4.34e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.97e-08 V                   ; 2.4 V               ; -0.023 V            ; 0.201 V                              ; 0.081 V                              ; 4.59e-10 s                  ; 5.51e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.97e-08 V                  ; 2.4 V              ; -0.023 V           ; 0.201 V                             ; 0.081 V                             ; 4.59e-10 s                 ; 5.51e-10 s                 ; No                        ; Yes                       ;
 +-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -925,7 +939,6 @@ No synchronizer chains to report.
 ; DRAM_DQ[15]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0587 V           ; 0.248 V                              ; 0.173 V                              ; 4.61e-10 s                  ; 6e-10 s                     ; No                         ; No                         ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0587 V          ; 0.248 V                             ; 0.173 V                             ; 4.61e-10 s                 ; 6e-10 s                    ; No                        ; No                        ;
 ; GSENSOR_SDI     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0535 V           ; 0.313 V                              ; 0.225 V                              ; 4.84e-10 s                  ; 6.28e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0535 V          ; 0.313 V                             ; 0.225 V                             ; 4.84e-10 s                 ; 6.28e-10 s                 ; No                        ; Yes                       ;
 ; GSENSOR_SDO     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0547 V           ; 0.314 V                              ; 0.224 V                              ; 4.84e-10 s                  ; 6.28e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0547 V          ; 0.314 V                             ; 0.224 V                             ; 4.84e-10 s                 ; 6.28e-10 s                 ; No                        ; Yes                       ;
-; ARDUINO_IO[3]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0592 V           ; 0.248 V                              ; 0.172 V                              ; 4.61e-10 s                  ; 6e-10 s                     ; No                         ; No                         ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0592 V          ; 0.248 V                             ; 0.172 V                             ; 4.61e-10 s                 ; 6e-10 s                    ; No                        ; No                        ;
 ; ARDUINO_IO[4]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0592 V           ; 0.248 V                              ; 0.172 V                              ; 4.61e-10 s                  ; 6e-10 s                     ; No                         ; No                         ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0592 V          ; 0.248 V                             ; 0.172 V                             ; 4.61e-10 s                 ; 6e-10 s                    ; No                        ; No                        ;
 ; ARDUINO_IO[5]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0535 V           ; 0.313 V                              ; 0.225 V                              ; 4.84e-10 s                  ; 6.28e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0535 V          ; 0.313 V                             ; 0.225 V                             ; 4.84e-10 s                 ; 6.28e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[6]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0535 V           ; 0.313 V                              ; 0.225 V                              ; 4.84e-10 s                  ; 6.28e-10 s                  ; No                         ; Yes                        ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0535 V          ; 0.313 V                             ; 0.225 V                             ; 4.84e-10 s                 ; 6.28e-10 s                 ; No                        ; Yes                       ;
@@ -978,6 +991,7 @@ No synchronizer chains to report.
 ; ARDUINO_IO[0]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0592 V           ; 0.248 V                              ; 0.172 V                              ; 4.61e-10 s                  ; 6e-10 s                     ; No                         ; No                         ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0592 V          ; 0.248 V                             ; 0.172 V                             ; 4.61e-10 s                 ; 6e-10 s                    ; No                        ; No                        ;
 ; ARDUINO_IO[1]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0587 V           ; 0.248 V                              ; 0.173 V                              ; 4.61e-10 s                  ; 6e-10 s                     ; No                         ; No                         ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0587 V          ; 0.248 V                             ; 0.173 V                             ; 4.61e-10 s                 ; 6e-10 s                    ; No                        ; No                        ;
 ; ARDUINO_IO[2]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0592 V           ; 0.248 V                              ; 0.172 V                              ; 4.61e-10 s                  ; 6e-10 s                     ; No                         ; No                         ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0592 V          ; 0.248 V                             ; 0.172 V                             ; 4.61e-10 s                 ; 6e-10 s                    ; No                        ; No                        ;
+; ARDUINO_IO[3]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.35e-06 V                   ; 3.17 V              ; -0.0592 V           ; 0.248 V                              ; 0.172 V                              ; 4.61e-10 s                  ; 6e-10 s                     ; No                         ; No                         ; 3.08 V                      ; 5.35e-06 V                  ; 3.17 V             ; -0.0592 V          ; 0.248 V                             ; 0.172 V                             ; 4.61e-10 s                 ; 6e-10 s                    ; No                        ; No                        ;
 ; ~ALTERA_TDO~    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 3.04e-06 V                   ; 2.37 V              ; -0.0108 V           ; 0.13 V                               ; 0.066 V                              ; 6.32e-10 s                  ; 6.45e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 3.04e-06 V                  ; 2.37 V             ; -0.0108 V          ; 0.13 V                              ; 0.066 V                             ; 6.32e-10 s                 ; 6.45e-10 s                 ; No                        ; Yes                       ;
 +-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
@@ -1102,7 +1116,6 @@ No synchronizer chains to report.
 ; DRAM_DQ[15]     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; GSENSOR_SDI     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0257 V           ; 0.468 V                              ; 0.138 V                              ; 3.02e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0257 V          ; 0.468 V                             ; 0.138 V                             ; 3.02e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; GSENSOR_SDO     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0264 V           ; 0.468 V                              ; 0.142 V                              ; 3.02e-10 s                  ; 4.42e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0264 V          ; 0.468 V                             ; 0.142 V                             ; 3.02e-10 s                 ; 4.42e-10 s                 ; No                        ; Yes                       ;
-; ARDUINO_IO[3]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[4]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[5]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0257 V           ; 0.468 V                              ; 0.138 V                              ; 3.02e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0257 V          ; 0.468 V                             ; 0.138 V                             ; 3.02e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[6]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.63 V              ; -0.0257 V           ; 0.468 V                              ; 0.138 V                              ; 3.02e-10 s                  ; 4.44e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.63 V             ; -0.0257 V          ; 0.468 V                             ; 0.138 V                             ; 3.02e-10 s                 ; 4.44e-10 s                 ; No                        ; Yes                       ;
@@ -1155,45 +1168,60 @@ No synchronizer chains to report.
 ; ARDUINO_IO[0]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[1]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.65 V              ; -0.0209 V           ; 0.391 V                              ; 0.09 V                               ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.65 V             ; -0.0209 V          ; 0.391 V                             ; 0.09 V                              ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ARDUINO_IO[2]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
+; ARDUINO_IO[3]   ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 5.04e-07 V                   ; 3.64 V              ; -0.0201 V           ; 0.391 V                              ; 0.088 V                              ; 2.79e-10 s                  ; 3.95e-10 s                  ; No                         ; Yes                        ; 3.46 V                      ; 5.04e-07 V                  ; 3.64 V             ; -0.0201 V          ; 0.391 V                             ; 0.088 V                             ; 2.79e-10 s                 ; 3.95e-10 s                 ; No                        ; Yes                       ;
 ; ~ALTERA_TDO~    ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 1.68e-07 V                   ; 2.73 V              ; -0.0395 V           ; 0.361 V                              ; 0.109 V                              ; 3.1e-10 s                   ; 4.41e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 1.68e-07 V                  ; 2.73 V             ; -0.0395 V          ; 0.361 V                             ; 0.109 V                             ; 3.1e-10 s                  ; 4.41e-10 s                 ; No                        ; Yes                       ;
 +-----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Setup Transfers                                                                                                                         ;
-+----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
-; From Clock                                   ; To Clock                                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1520     ; 0        ; 0        ; 0        ;
-; MAX10_CLK1_50                                ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 66       ; 0        ; 0        ; 0        ;
-; FinalProject:comb_3|p1_score[0]              ; FinalProject:comb_3|p1_score[0]              ; 6        ; 6        ; 0        ; 0        ;
-; MAX10_CLK1_50                                ; FinalProject:comb_3|p1_score[0]              ; 186      ; 0        ; 0        ; 0        ;
-; FinalProject:comb_3|p2_score[0]              ; FinalProject:comb_3|p2_score[0]              ; 6        ; 6        ; 0        ; 0        ;
-; MAX10_CLK1_50                                ; FinalProject:comb_3|p2_score[0]              ; 186      ; 0        ; 0        ; 0        ;
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; MAX10_CLK1_50                                ; 34947    ; 1        ; 0        ; 0        ;
-; FinalProject:comb_3|p1_score[0]              ; MAX10_CLK1_50                                ; 96       ; 96       ; 0        ; 0        ;
-; FinalProject:comb_3|p2_score[0]              ; MAX10_CLK1_50                                ; 64       ; 64       ; 0        ; 0        ;
-; MAX10_CLK1_50                                ; MAX10_CLK1_50                                ; 7609     ; 0        ; 0        ; 0        ;
-+----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                                                             ;
++--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                             ; To Clock                                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; FinalProject:comb_3|ClockDivider:comb_3|cout           ; 3752     ; 0        ; 0        ; 0        ;
+; FinalProject:comb_3|p1_score[0]                        ; FinalProject:comb_3|ClockDivider:comb_3|cout           ; 11       ; 11       ; 0        ; 0        ;
+; FinalProject:comb_3|p2_score[0]                        ; FinalProject:comb_3|ClockDivider:comb_3|cout           ; 11       ; 11       ; 0        ; 0        ;
+; MAX10_CLK1_50                                          ; FinalProject:comb_3|ClockDivider:comb_3|cout           ; 750      ; 0        ; 0        ; 0        ;
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; 2        ; 0        ; 0        ; 0        ;
+; FinalProject:comb_3|p1_score[0]                        ; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; 2        ; 2        ; 0        ; 0        ;
+; FinalProject:comb_3|p2_score[0]                        ; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; 2        ; 2        ; 0        ; 0        ;
+; MAX10_CLK1_50                                          ; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; 127      ; 0        ; 0        ; 0        ;
+; FinalProject:comb_3|p1_score[0]                        ; FinalProject:comb_3|p1_score[0]                        ; 6        ; 6        ; 0        ; 0        ;
+; MAX10_CLK1_50                                          ; FinalProject:comb_3|p1_score[0]                        ; 186      ; 0        ; 0        ; 0        ;
+; FinalProject:comb_3|p2_score[0]                        ; FinalProject:comb_3|p2_score[0]                        ; 6        ; 6        ; 0        ; 0        ;
+; MAX10_CLK1_50                                          ; FinalProject:comb_3|p2_score[0]                        ; 186      ; 0        ; 0        ; 0        ;
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; MAX10_CLK1_50                                          ; 35144    ; 1        ; 0        ; 0        ;
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; MAX10_CLK1_50                                          ; 1        ; 1        ; 0        ; 0        ;
+; FinalProject:comb_3|p1_score[0]                        ; MAX10_CLK1_50                                          ; 100      ; 100      ; 0        ; 0        ;
+; FinalProject:comb_3|p2_score[0]                        ; MAX10_CLK1_50                                          ; 66       ; 66       ; 0        ; 0        ;
+; MAX10_CLK1_50                                          ; MAX10_CLK1_50                                          ; 9391     ; 0        ; 0        ; 0        ;
++--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------+
-; Hold Transfers                                                                                                                          ;
-+----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
-; From Clock                                   ; To Clock                                     ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
-+----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 1520     ; 0        ; 0        ; 0        ;
-; MAX10_CLK1_50                                ; FinalProject:comb_3|ClockDivider:comb_3|cout ; 66       ; 0        ; 0        ; 0        ;
-; FinalProject:comb_3|p1_score[0]              ; FinalProject:comb_3|p1_score[0]              ; 6        ; 6        ; 0        ; 0        ;
-; MAX10_CLK1_50                                ; FinalProject:comb_3|p1_score[0]              ; 186      ; 0        ; 0        ; 0        ;
-; FinalProject:comb_3|p2_score[0]              ; FinalProject:comb_3|p2_score[0]              ; 6        ; 6        ; 0        ; 0        ;
-; MAX10_CLK1_50                                ; FinalProject:comb_3|p2_score[0]              ; 186      ; 0        ; 0        ; 0        ;
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; MAX10_CLK1_50                                ; 34947    ; 1        ; 0        ; 0        ;
-; FinalProject:comb_3|p1_score[0]              ; MAX10_CLK1_50                                ; 96       ; 96       ; 0        ; 0        ;
-; FinalProject:comb_3|p2_score[0]              ; MAX10_CLK1_50                                ; 64       ; 64       ; 0        ; 0        ;
-; MAX10_CLK1_50                                ; MAX10_CLK1_50                                ; 7609     ; 0        ; 0        ; 0        ;
-+----------------------------------------------+----------------------------------------------+----------+----------+----------+----------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                                                              ;
++--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
+; From Clock                                             ; To Clock                                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; FinalProject:comb_3|ClockDivider:comb_3|cout           ; 3752     ; 0        ; 0        ; 0        ;
+; FinalProject:comb_3|p1_score[0]                        ; FinalProject:comb_3|ClockDivider:comb_3|cout           ; 11       ; 11       ; 0        ; 0        ;
+; FinalProject:comb_3|p2_score[0]                        ; FinalProject:comb_3|ClockDivider:comb_3|cout           ; 11       ; 11       ; 0        ; 0        ;
+; MAX10_CLK1_50                                          ; FinalProject:comb_3|ClockDivider:comb_3|cout           ; 750      ; 0        ; 0        ; 0        ;
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; 2        ; 0        ; 0        ; 0        ;
+; FinalProject:comb_3|p1_score[0]                        ; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; 2        ; 2        ; 0        ; 0        ;
+; FinalProject:comb_3|p2_score[0]                        ; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; 2        ; 2        ; 0        ; 0        ;
+; MAX10_CLK1_50                                          ; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; 127      ; 0        ; 0        ; 0        ;
+; FinalProject:comb_3|p1_score[0]                        ; FinalProject:comb_3|p1_score[0]                        ; 6        ; 6        ; 0        ; 0        ;
+; MAX10_CLK1_50                                          ; FinalProject:comb_3|p1_score[0]                        ; 186      ; 0        ; 0        ; 0        ;
+; FinalProject:comb_3|p2_score[0]                        ; FinalProject:comb_3|p2_score[0]                        ; 6        ; 6        ; 0        ; 0        ;
+; MAX10_CLK1_50                                          ; FinalProject:comb_3|p2_score[0]                        ; 186      ; 0        ; 0        ; 0        ;
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; MAX10_CLK1_50                                          ; 35144    ; 1        ; 0        ; 0        ;
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; MAX10_CLK1_50                                          ; 1        ; 1        ; 0        ; 0        ;
+; FinalProject:comb_3|p1_score[0]                        ; MAX10_CLK1_50                                          ; 100      ; 100      ; 0        ; 0        ;
+; FinalProject:comb_3|p2_score[0]                        ; MAX10_CLK1_50                                          ; 66       ; 66       ; 0        ; 0        ;
+; MAX10_CLK1_50                                          ; MAX10_CLK1_50                                          ; 9391     ; 0        ; 0        ; 0        ;
++--------------------------------------------------------+--------------------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
 
@@ -1247,22 +1275,23 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 114   ; 114  ;
-; Unconstrained Output Ports      ; 37    ; 37   ;
-; Unconstrained Output Port Paths ; 1012  ; 1012 ;
+; Unconstrained Input Port Paths  ; 150   ; 150  ;
+; Unconstrained Output Ports      ; 40    ; 40   ;
+; Unconstrained Output Port Paths ; 984   ; 984  ;
 +---------------------------------+-------+------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Clock Status Summary                                                                                             ;
-+----------------------------------------------+----------------------------------------------+------+-------------+
-; Target                                       ; Clock                                        ; Type ; Status      ;
-+----------------------------------------------+----------------------------------------------+------+-------------+
-; FinalProject:comb_3|ClockDivider:comb_3|cout ; FinalProject:comb_3|ClockDivider:comb_3|cout ; Base ; Constrained ;
-; FinalProject:comb_3|p1_score[0]              ; FinalProject:comb_3|p1_score[0]              ; Base ; Constrained ;
-; FinalProject:comb_3|p2_score[0]              ; FinalProject:comb_3|p2_score[0]              ; Base ; Constrained ;
-; MAX10_CLK1_50                                ; MAX10_CLK1_50                                ; Base ; Constrained ;
-+----------------------------------------------+----------------------------------------------+------+-------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                                                 ;
++--------------------------------------------------------+--------------------------------------------------------+------+-------------+
+; Target                                                 ; Clock                                                  ; Type ; Status      ;
++--------------------------------------------------------+--------------------------------------------------------+------+-------------+
+; FinalProject:comb_3|ClockDivider:comb_3|cout           ; FinalProject:comb_3|ClockDivider:comb_3|cout           ; Base ; Constrained ;
+; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle ; Base ; Constrained ;
+; FinalProject:comb_3|p1_score[0]                        ; FinalProject:comb_3|p1_score[0]                        ; Base ; Constrained ;
+; FinalProject:comb_3|p2_score[0]                        ; FinalProject:comb_3|p2_score[0]                        ; Base ; Constrained ;
+; MAX10_CLK1_50                                          ; MAX10_CLK1_50                                          ; Base ; Constrained ;
++--------------------------------------------------------+--------------------------------------------------------+------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------+
@@ -1285,6 +1314,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ARDUINO_IO[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ARDUINO_IO[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1292,6 +1322,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX0[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1318,6 +1349,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX5[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX5[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX5[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------+---------------------------------------------------------------------------------------+
 
@@ -1342,6 +1374,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; ARDUINO_IO[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; ARDUINO_IO[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; ARDUINO_IO[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[1]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[2]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1349,6 +1382,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX0[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX0[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX0[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[3]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX1[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -1375,6 +1409,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; HEX5[4]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX5[5]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; HEX5[6]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; HEX5[7]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; LEDR[0]       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 +---------------+---------------------------------------------------------------------------------------+
 
@@ -1385,7 +1420,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Thu Nov 30 16:44:58 2023
+    Info: Processing started: Fri Dec  1 00:40:32 2023
 Info: Command: quartus_sta FinalProject -c FinalProject
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -1398,6 +1433,7 @@ Info (332142): No user constrained base clocks found in the design. Calling "der
 Info (332105): Deriving Clocks
     Info (332105): create_clock -period 1.000 -name MAX10_CLK1_50 MAX10_CLK1_50
     Info (332105): create_clock -period 1.000 -name FinalProject:comb_3|ClockDivider:comb_3|cout FinalProject:comb_3|ClockDivider:comb_3|cout
+    Info (332105): create_clock -period 1.000 -name FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle
     Info (332105): create_clock -period 1.000 -name FinalProject:comb_3|p1_score[0] FinalProject:comb_3|p1_score[0]
     Info (332105): create_clock -period 1.000 -name FinalProject:comb_3|p2_score[0] FinalProject:comb_3|p2_score[0]
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
@@ -1406,113 +1442,122 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -6.140
+Info (332146): Worst-case setup slack is -5.756
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -6.140            -574.542 MAX10_CLK1_50 
-    Info (332119):    -5.036             -27.832 FinalProject:comb_3|p2_score[0] 
-    Info (332119):    -4.462             -25.521 FinalProject:comb_3|p1_score[0] 
-    Info (332119):    -3.249             -86.758 FinalProject:comb_3|ClockDivider:comb_3|cout 
-Info (332146): Worst-case hold slack is -1.638
+    Info (332119):    -5.756            -272.488 FinalProject:comb_3|ClockDivider:comb_3|cout 
+    Info (332119):    -5.599            -644.083 MAX10_CLK1_50 
+    Info (332119):    -4.601             -23.811 FinalProject:comb_3|p1_score[0] 
+    Info (332119):    -4.190              -7.163 FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle 
+    Info (332119):    -3.900             -21.788 FinalProject:comb_3|p2_score[0] 
+Info (332146): Worst-case hold slack is 0.014
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.638             -41.518 MAX10_CLK1_50 
-    Info (332119):     0.805               0.000 FinalProject:comb_3|ClockDivider:comb_3|cout 
-    Info (332119):     1.283               0.000 FinalProject:comb_3|p2_score[0] 
-    Info (332119):     1.339               0.000 FinalProject:comb_3|p1_score[0] 
-Info (332146): Worst-case recovery slack is -4.954
+    Info (332119):     0.014               0.000 FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle 
+    Info (332119):     0.331               0.000 MAX10_CLK1_50 
+    Info (332119):     0.343               0.000 FinalProject:comb_3|ClockDivider:comb_3|cout 
+    Info (332119):     0.568               0.000 FinalProject:comb_3|p2_score[0] 
+    Info (332119):     1.004               0.000 FinalProject:comb_3|p1_score[0] 
+Info (332146): Worst-case recovery slack is -6.158
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.954             -27.257 FinalProject:comb_3|p2_score[0] 
-    Info (332119):    -4.417             -25.737 FinalProject:comb_3|p1_score[0] 
-Info (332146): Worst-case removal slack is 1.318
+    Info (332119):    -6.158             -34.643 FinalProject:comb_3|p2_score[0] 
+    Info (332119):    -5.683             -31.904 FinalProject:comb_3|p1_score[0] 
+Info (332146): Worst-case removal slack is 1.542
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.318               0.000 FinalProject:comb_3|p1_score[0] 
-    Info (332119):     1.514               0.000 FinalProject:comb_3|p2_score[0] 
+    Info (332119):     1.542               0.000 FinalProject:comb_3|p2_score[0] 
+    Info (332119):     1.552               0.000 FinalProject:comb_3|p1_score[0] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -166.748 MAX10_CLK1_50 
-    Info (332119):    -1.222             -41.548 FinalProject:comb_3|ClockDivider:comb_3|cout 
-    Info (332119):     0.419               0.000 FinalProject:comb_3|p1_score[0] 
-    Info (332119):     0.424               0.000 FinalProject:comb_3|p2_score[0] 
+    Info (332119):    -3.000            -209.518 MAX10_CLK1_50 
+    Info (332119):    -1.222            -127.088 FinalProject:comb_3|ClockDivider:comb_3|cout 
+    Info (332119):    -1.222              -2.444 FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle 
+    Info (332119):     0.408               0.000 FinalProject:comb_3|p1_score[0] 
+    Info (332119):     0.432               0.000 FinalProject:comb_3|p2_score[0] 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Warning (334000): Timing characteristics of device 10M50DAF484C6GES are preliminary
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.473
+Info (332146): Worst-case setup slack is -5.111
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.473            -513.657 MAX10_CLK1_50 
-    Info (332119):    -4.481             -24.783 FinalProject:comb_3|p2_score[0] 
-    Info (332119):    -3.990             -22.859 FinalProject:comb_3|p1_score[0] 
-    Info (332119):    -2.870             -76.472 FinalProject:comb_3|ClockDivider:comb_3|cout 
-Info (332146): Worst-case hold slack is -1.507
+    Info (332119):    -5.111            -239.565 FinalProject:comb_3|ClockDivider:comb_3|cout 
+    Info (332119):    -4.989            -574.031 MAX10_CLK1_50 
+    Info (332119):    -4.123             -21.332 FinalProject:comb_3|p1_score[0] 
+    Info (332119):    -3.671              -6.244 FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle 
+    Info (332119):    -3.455             -19.445 FinalProject:comb_3|p2_score[0] 
+Info (332146): Worst-case hold slack is 0.030
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.507             -36.600 MAX10_CLK1_50 
-    Info (332119):     0.736               0.000 FinalProject:comb_3|ClockDivider:comb_3|cout 
-    Info (332119):     1.169               0.000 FinalProject:comb_3|p2_score[0] 
-    Info (332119):     1.280               0.000 FinalProject:comb_3|p1_score[0] 
-Info (332146): Worst-case recovery slack is -4.461
+    Info (332119):     0.030               0.000 FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle 
+    Info (332119):     0.300               0.000 MAX10_CLK1_50 
+    Info (332119):     0.312               0.000 FinalProject:comb_3|ClockDivider:comb_3|cout 
+    Info (332119):     0.554               0.000 FinalProject:comb_3|p2_score[0] 
+    Info (332119):     0.935               0.000 FinalProject:comb_3|p1_score[0] 
+Info (332146): Worst-case recovery slack is -5.472
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.461             -24.589 FinalProject:comb_3|p2_score[0] 
-    Info (332119):    -3.971             -23.103 FinalProject:comb_3|p1_score[0] 
-Info (332146): Worst-case removal slack is 1.193
+    Info (332119):    -5.472             -30.793 FinalProject:comb_3|p2_score[0] 
+    Info (332119):    -5.046             -28.337 FinalProject:comb_3|p1_score[0] 
+Info (332146): Worst-case removal slack is 1.496
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.193               0.000 FinalProject:comb_3|p1_score[0] 
-    Info (332119):     1.376               0.000 FinalProject:comb_3|p2_score[0] 
+    Info (332119):     1.496               0.000 FinalProject:comb_3|p2_score[0] 
+    Info (332119):     1.509               0.000 FinalProject:comb_3|p1_score[0] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -166.748 MAX10_CLK1_50 
-    Info (332119):    -1.222             -41.548 FinalProject:comb_3|ClockDivider:comb_3|cout 
-    Info (332119):     0.446               0.000 FinalProject:comb_3|p2_score[0] 
-    Info (332119):     0.454               0.000 FinalProject:comb_3|p1_score[0] 
+    Info (332119):    -3.000            -209.518 MAX10_CLK1_50 
+    Info (332119):    -1.222            -127.088 FinalProject:comb_3|ClockDivider:comb_3|cout 
+    Info (332119):    -1.222              -2.444 FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle 
+    Info (332119):     0.420               0.000 FinalProject:comb_3|p1_score[0] 
+    Info (332119):     0.455               0.000 FinalProject:comb_3|p2_score[0] 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -2.421
+Info (332146): Worst-case setup slack is -2.347
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.421            -204.786 MAX10_CLK1_50 
-    Info (332119):    -1.862              -9.952 FinalProject:comb_3|p2_score[0] 
-    Info (332119):    -1.517              -8.372 FinalProject:comb_3|p1_score[0] 
-    Info (332119):    -1.034             -24.293 FinalProject:comb_3|ClockDivider:comb_3|cout 
-Info (332146): Worst-case hold slack is -0.908
+    Info (332119):    -2.347             -76.599 FinalProject:comb_3|ClockDivider:comb_3|cout 
+    Info (332119):    -2.219            -219.842 MAX10_CLK1_50 
+    Info (332119):    -1.635              -8.039 FinalProject:comb_3|p1_score[0] 
+    Info (332119):    -1.558              -2.485 FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle 
+    Info (332119):    -1.303              -6.967 FinalProject:comb_3|p2_score[0] 
+Info (332146): Worst-case hold slack is -0.109
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.908             -27.083 MAX10_CLK1_50 
-    Info (332119):     0.286               0.000 FinalProject:comb_3|ClockDivider:comb_3|cout 
-    Info (332119):     0.499               0.000 FinalProject:comb_3|p2_score[0] 
-    Info (332119):     0.535               0.000 FinalProject:comb_3|p1_score[0] 
-Info (332146): Worst-case recovery slack is -1.885
+    Info (332119):    -0.109              -0.109 FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle 
+    Info (332119):     0.152               0.000 MAX10_CLK1_50 
+    Info (332119):     0.156               0.000 FinalProject:comb_3|ClockDivider:comb_3|cout 
+    Info (332119):     0.244               0.000 FinalProject:comb_3|p2_score[0] 
+    Info (332119):     0.429               0.000 FinalProject:comb_3|p1_score[0] 
+Info (332146): Worst-case recovery slack is -2.631
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.885              -9.921 FinalProject:comb_3|p2_score[0] 
-    Info (332119):    -1.583              -9.069 FinalProject:comb_3|p1_score[0] 
-Info (332146): Worst-case removal slack is 0.531
+    Info (332119):    -2.631             -14.605 FinalProject:comb_3|p2_score[0] 
+    Info (332119):    -2.283             -12.582 FinalProject:comb_3|p1_score[0] 
+Info (332146): Worst-case removal slack is 0.580
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.531               0.000 FinalProject:comb_3|p1_score[0] 
-    Info (332119):     0.646               0.000 FinalProject:comb_3|p2_score[0] 
+    Info (332119):     0.580               0.000 FinalProject:comb_3|p1_score[0] 
+    Info (332119):     0.613               0.000 FinalProject:comb_3|p2_score[0] 
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000            -151.820 MAX10_CLK1_50 
-    Info (332119):    -1.000             -34.000 FinalProject:comb_3|ClockDivider:comb_3|cout 
-    Info (332119):     0.431               0.000 FinalProject:comb_3|p1_score[0] 
-    Info (332119):     0.434               0.000 FinalProject:comb_3|p2_score[0] 
+    Info (332119):    -3.000            -194.703 MAX10_CLK1_50 
+    Info (332119):    -1.000            -104.000 FinalProject:comb_3|ClockDivider:comb_3|cout 
+    Info (332119):    -1.000              -2.000 FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle 
+    Info (332119):     0.423               0.000 FinalProject:comb_3|p1_score[0] 
+    Info (332119):     0.427               0.000 FinalProject:comb_3|p2_score[0] 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4930 megabytes
-    Info: Processing ended: Thu Nov 30 16:45:00 2023
+    Info: Peak virtual memory: 4955 megabytes
+    Info: Processing ended: Fri Dec  1 00:40:34 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:03
 

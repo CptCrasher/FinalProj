@@ -1,3 +1,3 @@
-Warning (10268): Verilog HDL information at FinalProject.v(20): always construct contains both blocking and non-blocking assignments File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-Warning (10268): Verilog HDL information at FinalProject.v(115): always construct contains both blocking and non-blocking assignments File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 115
-Warning (10268): Verilog HDL information at FinalProject.v(138): always construct contains both blocking and non-blocking assignments File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 138
+Warning (10268): Verilog HDL information at FinalProject.v(22): always construct contains both blocking and non-blocking assignments File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+Warning (10268): Verilog HDL information at FinalProject.v(146): always construct contains both blocking and non-blocking assignments File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 146
+Warning (10268): Verilog HDL information at FinalProject.v(225): always construct contains both blocking and non-blocking assignments File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 225

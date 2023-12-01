@@ -2,196 +2,232 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'MAX10_CLK1_50'
-Slack : -6.140
-TNS   : -574.542
+Type  : Slow 1200mV 85C Model Setup 'FinalProject:comb_3|ClockDivider:comb_3|cout'
+Slack : -5.756
+TNS   : -272.488
 
-Type  : Slow 1200mV 85C Model Setup 'FinalProject:comb_3|p2_score[0]'
-Slack : -5.036
-TNS   : -27.832
+Type  : Slow 1200mV 85C Model Setup 'MAX10_CLK1_50'
+Slack : -5.599
+TNS   : -644.083
 
 Type  : Slow 1200mV 85C Model Setup 'FinalProject:comb_3|p1_score[0]'
-Slack : -4.462
-TNS   : -25.521
+Slack : -4.601
+TNS   : -23.811
 
-Type  : Slow 1200mV 85C Model Setup 'FinalProject:comb_3|ClockDivider:comb_3|cout'
-Slack : -3.249
-TNS   : -86.758
+Type  : Slow 1200mV 85C Model Setup 'FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle'
+Slack : -4.190
+TNS   : -7.163
+
+Type  : Slow 1200mV 85C Model Setup 'FinalProject:comb_3|p2_score[0]'
+Slack : -3.900
+TNS   : -21.788
+
+Type  : Slow 1200mV 85C Model Hold 'FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle'
+Slack : 0.014
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'MAX10_CLK1_50'
-Slack : -1.638
-TNS   : -41.518
+Slack : 0.331
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'FinalProject:comb_3|ClockDivider:comb_3|cout'
-Slack : 0.805
+Slack : 0.343
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'FinalProject:comb_3|p2_score[0]'
-Slack : 1.283
+Slack : 0.568
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'FinalProject:comb_3|p1_score[0]'
-Slack : 1.339
+Slack : 1.004
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'FinalProject:comb_3|p2_score[0]'
-Slack : -4.954
-TNS   : -27.257
+Slack : -6.158
+TNS   : -34.643
 
 Type  : Slow 1200mV 85C Model Recovery 'FinalProject:comb_3|p1_score[0]'
-Slack : -4.417
-TNS   : -25.737
-
-Type  : Slow 1200mV 85C Model Removal 'FinalProject:comb_3|p1_score[0]'
-Slack : 1.318
-TNS   : 0.000
+Slack : -5.683
+TNS   : -31.904
 
 Type  : Slow 1200mV 85C Model Removal 'FinalProject:comb_3|p2_score[0]'
-Slack : 1.514
+Slack : 1.542
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'FinalProject:comb_3|p1_score[0]'
+Slack : 1.552
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'MAX10_CLK1_50'
 Slack : -3.000
-TNS   : -166.748
+TNS   : -209.518
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FinalProject:comb_3|ClockDivider:comb_3|cout'
 Slack : -1.222
-TNS   : -41.548
+TNS   : -127.088
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle'
+Slack : -1.222
+TNS   : -2.444
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FinalProject:comb_3|p1_score[0]'
-Slack : 0.419
+Slack : 0.408
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'FinalProject:comb_3|p2_score[0]'
-Slack : 0.424
+Slack : 0.432
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Setup 'MAX10_CLK1_50'
-Slack : -5.473
-TNS   : -513.657
+Type  : Slow 1200mV 0C Model Setup 'FinalProject:comb_3|ClockDivider:comb_3|cout'
+Slack : -5.111
+TNS   : -239.565
 
-Type  : Slow 1200mV 0C Model Setup 'FinalProject:comb_3|p2_score[0]'
-Slack : -4.481
-TNS   : -24.783
+Type  : Slow 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -4.989
+TNS   : -574.031
 
 Type  : Slow 1200mV 0C Model Setup 'FinalProject:comb_3|p1_score[0]'
-Slack : -3.990
-TNS   : -22.859
+Slack : -4.123
+TNS   : -21.332
 
-Type  : Slow 1200mV 0C Model Setup 'FinalProject:comb_3|ClockDivider:comb_3|cout'
-Slack : -2.870
-TNS   : -76.472
+Type  : Slow 1200mV 0C Model Setup 'FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle'
+Slack : -3.671
+TNS   : -6.244
+
+Type  : Slow 1200mV 0C Model Setup 'FinalProject:comb_3|p2_score[0]'
+Slack : -3.455
+TNS   : -19.445
+
+Type  : Slow 1200mV 0C Model Hold 'FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle'
+Slack : 0.030
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'MAX10_CLK1_50'
-Slack : -1.507
-TNS   : -36.600
+Slack : 0.300
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'FinalProject:comb_3|ClockDivider:comb_3|cout'
-Slack : 0.736
+Slack : 0.312
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'FinalProject:comb_3|p2_score[0]'
-Slack : 1.169
+Slack : 0.554
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'FinalProject:comb_3|p1_score[0]'
-Slack : 1.280
+Slack : 0.935
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'FinalProject:comb_3|p2_score[0]'
-Slack : -4.461
-TNS   : -24.589
+Slack : -5.472
+TNS   : -30.793
 
 Type  : Slow 1200mV 0C Model Recovery 'FinalProject:comb_3|p1_score[0]'
-Slack : -3.971
-TNS   : -23.103
-
-Type  : Slow 1200mV 0C Model Removal 'FinalProject:comb_3|p1_score[0]'
-Slack : 1.193
-TNS   : 0.000
+Slack : -5.046
+TNS   : -28.337
 
 Type  : Slow 1200mV 0C Model Removal 'FinalProject:comb_3|p2_score[0]'
-Slack : 1.376
+Slack : 1.496
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'FinalProject:comb_3|p1_score[0]'
+Slack : 1.509
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
 Slack : -3.000
-TNS   : -166.748
+TNS   : -209.518
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FinalProject:comb_3|ClockDivider:comb_3|cout'
 Slack : -1.222
-TNS   : -41.548
+TNS   : -127.088
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FinalProject:comb_3|p2_score[0]'
-Slack : 0.446
-TNS   : 0.000
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle'
+Slack : -1.222
+TNS   : -2.444
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FinalProject:comb_3|p1_score[0]'
-Slack : 0.454
+Slack : 0.420
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Setup 'MAX10_CLK1_50'
-Slack : -2.421
-TNS   : -204.786
-
-Type  : Fast 1200mV 0C Model Setup 'FinalProject:comb_3|p2_score[0]'
-Slack : -1.862
-TNS   : -9.952
-
-Type  : Fast 1200mV 0C Model Setup 'FinalProject:comb_3|p1_score[0]'
-Slack : -1.517
-TNS   : -8.372
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'FinalProject:comb_3|p2_score[0]'
+Slack : 0.455
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'FinalProject:comb_3|ClockDivider:comb_3|cout'
-Slack : -1.034
-TNS   : -24.293
+Slack : -2.347
+TNS   : -76.599
+
+Type  : Fast 1200mV 0C Model Setup 'MAX10_CLK1_50'
+Slack : -2.219
+TNS   : -219.842
+
+Type  : Fast 1200mV 0C Model Setup 'FinalProject:comb_3|p1_score[0]'
+Slack : -1.635
+TNS   : -8.039
+
+Type  : Fast 1200mV 0C Model Setup 'FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle'
+Slack : -1.558
+TNS   : -2.485
+
+Type  : Fast 1200mV 0C Model Setup 'FinalProject:comb_3|p2_score[0]'
+Slack : -1.303
+TNS   : -6.967
+
+Type  : Fast 1200mV 0C Model Hold 'FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle'
+Slack : -0.109
+TNS   : -0.109
 
 Type  : Fast 1200mV 0C Model Hold 'MAX10_CLK1_50'
-Slack : -0.908
-TNS   : -27.083
+Slack : 0.152
+TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'FinalProject:comb_3|ClockDivider:comb_3|cout'
-Slack : 0.286
+Slack : 0.156
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'FinalProject:comb_3|p2_score[0]'
-Slack : 0.499
+Slack : 0.244
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'FinalProject:comb_3|p1_score[0]'
-Slack : 0.535
+Slack : 0.429
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'FinalProject:comb_3|p2_score[0]'
-Slack : -1.885
-TNS   : -9.921
+Slack : -2.631
+TNS   : -14.605
 
 Type  : Fast 1200mV 0C Model Recovery 'FinalProject:comb_3|p1_score[0]'
-Slack : -1.583
-TNS   : -9.069
+Slack : -2.283
+TNS   : -12.582
 
 Type  : Fast 1200mV 0C Model Removal 'FinalProject:comb_3|p1_score[0]'
-Slack : 0.531
+Slack : 0.580
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'FinalProject:comb_3|p2_score[0]'
-Slack : 0.646
+Slack : 0.613
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'MAX10_CLK1_50'
 Slack : -3.000
-TNS   : -151.820
+TNS   : -194.703
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FinalProject:comb_3|ClockDivider:comb_3|cout'
 Slack : -1.000
-TNS   : -34.000
+TNS   : -104.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FinalProject:comb_3|ClockDivider:comb_3|decimal_toggle'
+Slack : -1.000
+TNS   : -2.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FinalProject:comb_3|p1_score[0]'
-Slack : 0.431
+Slack : 0.423
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'FinalProject:comb_3|p2_score[0]'
-Slack : 0.434
+Slack : 0.427
 TNS   : 0.000
 
 ------------------------------------------------------------

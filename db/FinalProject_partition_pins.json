@@ -32,6 +32,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "HEX0[7]",
+					"strict" : false
+				},
+				{
 					"name" : "HEX1[0]",
 					"strict" : false
 				},
@@ -136,6 +140,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "HEX5[7]",
+					"strict" : false
+				},
+				{
 					"name" : "LEDR[0]",
 					"strict" : false
 				},
@@ -149,6 +157,10 @@
 				},
 				{
 					"name" : "ARDUINO_IO[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ARDUINO_IO[3]",
 					"strict" : false
 				},
 				{

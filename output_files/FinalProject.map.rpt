@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FinalProject
-Thu Nov 30 16:44:45 2023
+Fri Dec  1 00:40:17 2023
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -15,14 +15,15 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: FinalProject:comb_3|ClockDivider:comb_3
- 12. Port Connectivity Checks: "FinalProject:comb_3|Counter:comb_4"
- 13. Port Connectivity Checks: "FinalProject:comb_3"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: FinalProject:comb_3|ClockDivider:comb_3
+ 13. Port Connectivity Checks: "FinalProject:comb_3|Counter:comb_4"
+ 14. Port Connectivity Checks: "FinalProject:comb_3"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
+ 18. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -49,15 +50,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 30 16:44:45 2023          ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec  1 00:40:17 2023          ;
 ; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                      ; FinalProject                                   ;
 ; Top-level Entity Name              ; DE10_LITE_Golden_Top                           ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 314                                            ;
-;     Total combinational functions  ; 311                                            ;
-;     Dedicated logic registers      ; 168                                            ;
-; Total registers                    ; 168                                            ;
+; Total logic elements               ; 487                                            ;
+;     Total combinational functions  ; 482                                            ;
+;     Dedicated logic registers      ; 275                                            ;
+; Total registers                    ; 275                                            ;
 ; Total pins                         ; 185                                            ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -187,20 +188,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+---------------------+
 ; Resource                                    ; Usage               ;
 +---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 314                 ;
+; Estimated Total logic elements              ; 487                 ;
 ;                                             ;                     ;
-; Total combinational functions               ; 311                 ;
+; Total combinational functions               ; 482                 ;
 ; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 83                  ;
-;     -- 3 input functions                    ; 114                 ;
-;     -- <=2 input functions                  ; 114                 ;
+;     -- 4 input functions                    ; 147                 ;
+;     -- 3 input functions                    ; 125                 ;
+;     -- <=2 input functions                  ; 210                 ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 156                 ;
-;     -- arithmetic mode                      ; 155                 ;
+;     -- normal mode                          ; 206                 ;
+;     -- arithmetic mode                      ; 276                 ;
 ;                                             ;                     ;
-; Total registers                             ; 168                 ;
-;     -- Dedicated logic registers            ; 168                 ;
+; Total registers                             ; 275                 ;
+;     -- Dedicated logic registers            ; 275                 ;
 ;     -- I/O registers                        ; 0                   ;
 ;                                             ;                     ;
 ; I/O pins                                    ; 185                 ;
@@ -208,9 +209,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 0                   ;
 ;                                             ;                     ;
 ; Maximum fan-out node                        ; MAX10_CLK1_50~input ;
-; Maximum fan-out                             ; 134                 ;
-; Total fan-out                               ; 1783                ;
-; Average fan-out                             ; 1.94                ;
+; Maximum fan-out                             ; 169                 ;
+; Total fan-out                               ; 2577                ;
+; Average fan-out                             ; 2.15                ;
 +---------------------------------------------+---------------------+
 
 
@@ -219,12 +220,12 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                              ; Entity Name          ; Library Name ;
 +--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+----------------------+--------------+
-; |DE10_LITE_Golden_Top          ; 311 (1)             ; 168 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 185  ; 0            ; 0          ; |DE10_LITE_Golden_Top                                            ; DE10_LITE_Golden_Top ; work         ;
-;    |FinalProject:comb_3|       ; 310 (74)            ; 168 (67)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3                        ; FinalProject         ; work         ;
-;       |ClockDivider:comb_3|    ; 45 (45)             ; 33 (33)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|ClockDivider:comb_3    ; ClockDivider         ; work         ;
-;       |Counter:comb_4|         ; 78 (78)             ; 34 (34)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|Counter:comb_4         ; Counter              ; work         ;
+; |DE10_LITE_Golden_Top          ; 482 (1)             ; 275 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 185  ; 0            ; 0          ; |DE10_LITE_Golden_Top                                            ; DE10_LITE_Golden_Top ; work         ;
+;    |FinalProject:comb_3|       ; 481 (76)            ; 275 (69)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3                        ; FinalProject         ; work         ;
+;       |ClockDivider:comb_3|    ; 89 (89)             ; 66 (66)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|ClockDivider:comb_3    ; ClockDivider         ; work         ;
+;       |Counter:comb_4|         ; 198 (198)           ; 104 (104)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|Counter:comb_4         ; Counter              ; work         ;
 ;       |Debouncer:comb_13|      ; 47 (47)             ; 34 (34)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|Debouncer:comb_13      ; Debouncer            ; work         ;
-;       |segmentDisplay:comb_14| ; 66 (66)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|segmentDisplay:comb_14 ; segmentDisplay       ; work         ;
+;       |segmentDisplay:comb_14| ; 71 (71)             ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|FinalProject:comb_3|segmentDisplay:comb_14 ; segmentDisplay       ; work         ;
 +--------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -263,14 +264,25 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 168   ;
-; Number of registers using Synchronous Clear  ; 96    ;
+; Total registers                              ; 275   ;
+; Number of registers using Synchronous Clear  ; 160   ;
 ; Number of registers using Synchronous Load   ; 32    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 98    ;
+; Number of registers using Clock Enable       ; 134   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------+
+; Inverted Register Statistics                                   ;
++------------------------------------------------------+---------+
+; Inverted Register                                    ; Fan out ;
++------------------------------------------------------+---------+
+; FinalProject:comb_3|segmentDisplay:comb_14|decimal_f ; 2       ;
+; FinalProject:comb_3|Counter:comb_4|lights[4]         ; 5       ;
+; Total number of inverted registers = 2               ;         ;
++------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -278,11 +290,11 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|FinalProject:comb_3|Counter:comb_4|ARDUINO[1]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|FinalProject:comb_3|p2_score[14]                  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|FinalProject:comb_3|p1_score[17]                  ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|FinalProject:comb_3|Debouncer:comb_13|counter[14] ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|FinalProject:comb_3|Counter:comb_4|dec[25]        ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|FinalProject:comb_3|p2_score[1]                   ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|FinalProject:comb_3|p1_score[20]                  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|FinalProject:comb_3|Debouncer:comb_13|counter[23] ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|FinalProject:comb_3|Counter:comb_4|dec[4]         ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|FinalProject:comb_3|p2_change                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 
 
@@ -292,6 +304,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Parameter Name ; Value                            ; Type                             ;
 +----------------+----------------------------------+----------------------------------+
 ; D              ; 00000000001001100010010110100000 ; Unsigned Binary                  ;
+; D_decimal      ; 00000000101111101011110000100000 ; Unsigned Binary                  ;
 +----------------+----------------------------------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -320,26 +333,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 185                         ;
-; cycloneiii_ff         ; 168                         ;
-;     ENA               ; 34                          ;
+; cycloneiii_ff         ; 275                         ;
+;     ENA               ; 70                          ;
 ;     ENA SCLR          ; 64                          ;
-;     SCLR              ; 32                          ;
+;     SCLR              ; 96                          ;
 ;     SLD               ; 32                          ;
-;     plain             ; 6                           ;
+;     plain             ; 13                          ;
 ; cycloneiii_io_obuf    ; 71                          ;
-; cycloneiii_lcell_comb ; 313                         ;
-;     arith             ; 155                         ;
-;         2 data inputs ; 95                          ;
-;         3 data inputs ; 60                          ;
-;     normal            ; 158                         ;
+; cycloneiii_lcell_comb ; 485                         ;
+;     arith             ; 276                         ;
+;         2 data inputs ; 185                         ;
+;         3 data inputs ; 91                          ;
+;     normal            ; 209                         ;
 ;         0 data inputs ; 2                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 54                          ;
-;         4 data inputs ; 83                          ;
+;         1 data inputs ; 10                          ;
+;         2 data inputs ; 16                          ;
+;         3 data inputs ; 34                          ;
+;         4 data inputs ; 147                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 4.26                        ;
+; Average LUT depth     ; 4.16                        ;
 +-----------------------+-----------------------------+
 
 
@@ -358,7 +371,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Thu Nov 30 16:44:39 2023
+    Info: Processing started: Fri Dec  1 00:40:11 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FinalProject -c FinalProject
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -366,14 +379,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file de10_li
     Info (12023): Found entity 1: DE10_LITE_Golden_Top File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 29
 Info (12021): Found 5 design units, including 5 entities, in source file finalproject.v
     Info (12023): Found entity 1: FinalProject File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 1
-    Info (12023): Found entity 2: Debouncer File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 66
-    Info (12023): Found entity 3: ClockDivider File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 89
-    Info (12023): Found entity 4: Counter File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 104
-    Info (12023): Found entity 5: segmentDisplay File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 158
-Critical Warning (10846): Verilog HDL Instantiation warning at FinalProject.v(14): instance has no name File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 14
-Critical Warning (10846): Verilog HDL Instantiation warning at FinalProject.v(15): instance has no name File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 15
+    Info (12023): Found entity 2: Debouncer File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 87
+    Info (12023): Found entity 3: ClockDivider File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 112
+    Info (12023): Found entity 4: Counter File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 135
+    Info (12023): Found entity 5: segmentDisplay File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 390
 Critical Warning (10846): Verilog HDL Instantiation warning at FinalProject.v(16): instance has no name File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 16
 Critical Warning (10846): Verilog HDL Instantiation warning at FinalProject.v(17): instance has no name File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 17
+Critical Warning (10846): Verilog HDL Instantiation warning at FinalProject.v(18): instance has no name File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 18
+Critical Warning (10846): Verilog HDL Instantiation warning at FinalProject.v(19): instance has no name File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 19
 Critical Warning (10846): Verilog HDL Instantiation warning at DE10_LITE_Golden_Top.v(138): instance has no name File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 138
 Info (12127): Elaborating entity "DE10_LITE_Golden_Top" for the top level hierarchy
 Warning (10034): Output port "DRAM_ADDR" at DE10_LITE_Golden_Top.v(46) has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 46
@@ -395,45 +408,45 @@ Warning (10034): Output port "VGA_VS" at DE10_LITE_Golden_Top.v(100) has no driv
 Warning (10034): Output port "GSENSOR_CS_N" at DE10_LITE_Golden_Top.v(105) has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 105
 Warning (10034): Output port "GSENSOR_SCLK" at DE10_LITE_Golden_Top.v(107) has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 107
 Info (12128): Elaborating entity "FinalProject" for hierarchy "FinalProject:comb_3" File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 138
-Info (12128): Elaborating entity "ClockDivider" for hierarchy "FinalProject:comb_3|ClockDivider:comb_3" File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 14
-Info (12128): Elaborating entity "Counter" for hierarchy "FinalProject:comb_3|Counter:comb_4" File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 15
-Info (12128): Elaborating entity "Debouncer" for hierarchy "FinalProject:comb_3|Debouncer:comb_13" File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 16
-Info (12128): Elaborating entity "segmentDisplay" for hierarchy "FinalProject:comb_3|segmentDisplay:comb_14" File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 17
-Warning (10762): Verilog HDL Case Statement warning at FinalProject.v(167): can't check case statement for completeness because the case expression has too many possible states File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 167
-Warning (10270): Verilog HDL Case Statement warning at FinalProject.v(167): incomplete case statement has no default case item File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 167
-Warning (10762): Verilog HDL Case Statement warning at FinalProject.v(186): can't check case statement for completeness because the case expression has too many possible states File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 186
-Warning (10270): Verilog HDL Case Statement warning at FinalProject.v(186): incomplete case statement has no default case item File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 186
-Warning (10240): Verilog HDL Always Construct warning at FinalProject.v(163): inferring latch(es) for variable "a", which holds its previous value in one or more paths through the always construct File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 163
-Warning (10240): Verilog HDL Always Construct warning at FinalProject.v(163): inferring latch(es) for variable "b", which holds its previous value in one or more paths through the always construct File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 163
-Warning (10240): Verilog HDL Always Construct warning at FinalProject.v(163): inferring latch(es) for variable "f", which holds its previous value in one or more paths through the always construct File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 163
-Info (10041): Inferred latch for "f[0]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "f[1]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "f[2]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "f[3]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "f[4]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "f[5]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "f[6]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "b[0]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "b[1]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "b[2]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "b[3]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "b[4]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "b[5]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "b[6]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "b[7]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "a[0]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "a[1]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "a[2]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "a[3]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "a[4]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "a[5]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "a[6]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-Info (10041): Inferred latch for "a[7]" at FinalProject.v(208) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
+Info (12128): Elaborating entity "ClockDivider" for hierarchy "FinalProject:comb_3|ClockDivider:comb_3" File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 16
+Info (12128): Elaborating entity "Counter" for hierarchy "FinalProject:comb_3|Counter:comb_4" File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 17
+Info (12128): Elaborating entity "Debouncer" for hierarchy "FinalProject:comb_3|Debouncer:comb_13" File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 18
+Info (12128): Elaborating entity "segmentDisplay" for hierarchy "FinalProject:comb_3|segmentDisplay:comb_14" File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 19
+Warning (10762): Verilog HDL Case Statement warning at FinalProject.v(416): can't check case statement for completeness because the case expression has too many possible states File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Warning (10270): Verilog HDL Case Statement warning at FinalProject.v(416): incomplete case statement has no default case item File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Warning (10762): Verilog HDL Case Statement warning at FinalProject.v(434): can't check case statement for completeness because the case expression has too many possible states File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 434
+Warning (10270): Verilog HDL Case Statement warning at FinalProject.v(434): incomplete case statement has no default case item File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 434
+Warning (10240): Verilog HDL Always Construct warning at FinalProject.v(399): inferring latch(es) for variable "a", which holds its previous value in one or more paths through the always construct File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 399
+Warning (10240): Verilog HDL Always Construct warning at FinalProject.v(399): inferring latch(es) for variable "f", which holds its previous value in one or more paths through the always construct File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 399
+Warning (10240): Verilog HDL Always Construct warning at FinalProject.v(399): inferring latch(es) for variable "b", which holds its previous value in one or more paths through the always construct File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 399
+Info (10041): Inferred latch for "b[0]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "b[1]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "b[2]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "b[3]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "b[4]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "b[5]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "b[6]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "b[7]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "f[0]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "f[1]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "f[2]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "f[3]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "f[4]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "f[5]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "f[6]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "a[0]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "a[1]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "a[2]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "a[3]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "a[4]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "a[5]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+Info (10041): Inferred latch for "a[6]" at FinalProject.v(416) File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13034): The following nodes have both tri-state and non-tri-state drivers
     Warning (13035): Inserted always-enabled tri-state buffer between "ARDUINO_IO[0]" and its non-tri-state driver. File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Warning (13035): Inserted always-enabled tri-state buffer between "ARDUINO_IO[1]" and its non-tri-state driver. File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Warning (13035): Inserted always-enabled tri-state buffer between "ARDUINO_IO[2]" and its non-tri-state driver. File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
+    Warning (13035): Inserted always-enabled tri-state buffer between "ARDUINO_IO[3]" and its non-tri-state driver. File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "DRAM_DQ[0]" has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 52
     Warning (13040): bidirectional pin "DRAM_DQ[1]" has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 52
@@ -453,7 +466,6 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "DRAM_DQ[15]" has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 52
     Warning (13040): bidirectional pin "GSENSOR_SDI" has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 108
     Warning (13040): bidirectional pin "GSENSOR_SDO" has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 109
-    Warning (13040): bidirectional pin "ARDUINO_IO[3]" has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Warning (13040): bidirectional pin "ARDUINO_IO[4]" has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Warning (13040): bidirectional pin "ARDUINO_IO[5]" has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Warning (13040): bidirectional pin "ARDUINO_IO[6]" has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
@@ -503,46 +515,47 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO[33]" has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 122
     Warning (13040): bidirectional pin "GPIO[34]" has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 122
     Warning (13040): bidirectional pin "GPIO[35]" has no driver File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 122
-Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|f[0] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|f[2] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|f[3] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|f[4] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|f[5] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|f[6] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|a[0] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|a[2] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|a[3] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|a[4] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|a[5] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|a[6] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 208
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 20
+Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|f[0] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|f[2] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|f[3] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|f[4] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|f[5] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|f[6] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p1_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|a[0] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|a[2] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|a[3] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|a[4] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|a[5] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+Warning (13012): Latch FinalProject:comb_3|segmentDisplay:comb_14|a[6] has unsafe behavior File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 416
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal FinalProject:comb_3|p2_score[31] File: E:/quartus-lite/Labs/FinalProj/FinalProject.v Line: 22
 Warning (13009): TRI or OPNDRN buffers permanently enabled
     Warning (13010): Node "ARDUINO_IO[0]~synth" File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Warning (13010): Node "ARDUINO_IO[1]~synth" File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
     Warning (13010): Node "ARDUINO_IO[2]~synth" File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
+    Warning (13010): Node "ARDUINO_IO[3]~synth" File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 114
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "DRAM_ADDR[0]" is stuck at GND File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 46
     Warning (13410): Pin "DRAM_ADDR[1]" is stuck at GND File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 46
@@ -567,7 +580,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "DRAM_RAS_N" is stuck at GND File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 54
     Warning (13410): Pin "DRAM_UDQM" is stuck at GND File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 55
     Warning (13410): Pin "DRAM_WE_N" is stuck at GND File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 56
-    Warning (13410): Pin "HEX0[7]" is stuck at VCC File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 61
     Warning (13410): Pin "HEX1[1]" is stuck at VCC File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 64
     Warning (13410): Pin "HEX1[2]" is stuck at VCC File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 64
     Warning (13410): Pin "HEX1[7]" is stuck at VCC File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 64
@@ -581,7 +593,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "HEX4[5]" is stuck at VCC File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 73
     Warning (13410): Pin "HEX4[7]" is stuck at VCC File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 73
     Warning (13410): Pin "HEX5[1]" is stuck at GND File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 76
-    Warning (13410): Pin "HEX5[7]" is stuck at VCC File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 76
     Warning (13410): Pin "LEDR[1]" is stuck at GND File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 86
     Warning (13410): Pin "LEDR[2]" is stuck at GND File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 86
     Warning (13410): Pin "LEDR[3]" is stuck at GND File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 86
@@ -624,16 +635,16 @@ Warning (21074): Design contains 12 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[8]" File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 91
     Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 106
     Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: E:/quartus-lite/Labs/FinalProj/DE10_LITE_Golden_Top.v Line: 106
-Info (21057): Implemented 499 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 674 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 97 output pins
     Info (21060): Implemented 71 bidirectional pins
-    Info (21061): Implemented 314 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 222 warnings
+    Info (21061): Implemented 489 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 221 warnings
     Info: Peak virtual memory: 4829 megabytes
-    Info: Processing ended: Thu Nov 30 16:44:45 2023
+    Info: Processing ended: Fri Dec  1 00:40:17 2023
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Total CPU time (on all processors): 00:00:14
 
 
 +------------------------------------------+
