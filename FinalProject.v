@@ -174,7 +174,7 @@ endmodule
 
 module segmentDisplay(p2, p1, HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0],HEX4[7:0],HEX5[7:0]);
 	input [31:0] p1, p2;
-	reg [7:0] a, b, c, d, e, f;
+	reg [7:0] a, b, c, d, e, f; // represents the individual segments on HEX0, HEX1, HEX2, HEX3, HEX4, and HEX5 resepectively
 	output [7:0] HEX0,HEX1,HEX2,HEX3,HEX4,HEX5;
 	
 	always @(p1,p2)
@@ -228,7 +228,7 @@ module segmentDisplay(p2, p1, HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0],HEX4[7:0],
 					f = 7'b0011001;
 				end
 			endcase
-			// display '-' for characters 2-5 to separate the scores
+			// display '-' for characters 2-5 to separate each player's score
 			b = 8'b10111111;
 			c = 8'b10111111;
 			d = 8'b10111111;
