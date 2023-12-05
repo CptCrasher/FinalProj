@@ -39,7 +39,7 @@ module FinalProject(KEY[1:0],SW0,SW9,cin,HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0]
 				p1_change = 0;
 			end
 			
-	//If the countdown isn't finished (lock = 0)		
+		//If the countdown isn't finished (lock = 0)		
 		end else if(!lock) 
 		begin
 			//If a player flips their switch before the countdown is done, remove a point to the associated player a point and set the state back to idle (Only count the initial flipping of the switch)
@@ -89,20 +89,20 @@ module Debouncer(cin,SW0,SW9,SW0_debounced,SW9_debounced);
 	input cin,SW0,SW9;
 	output reg SW0_debounced,SW9_debounced;
 	reg [31:0] counter;
-	//Only capture the states of SW0 and SW9 every 
+	//Only capture the states of SW0 and SW9 every 10 ms
 	always @(posedge cin) begin
-    if (counter == 32'd0) begin
-        if (SW0 != SW0_debounced) begin
-            counter <= 32'd500000; //Every 10ms updated switch state
-            SW0_debounced <= SW0;
-        end
-        if (SW9 != SW9_debounced) begin
-            counter <= 32'd500000; //Every 10ms updated switch state
-            SW9_debounced <= SW9;
-        end
-    end else begin
-        counter <= counter - 32'd1;
-    end
+		if (counter == 32'd0) begin
+			if (SW0 != SW0_debounced) begin //Player 1
+				counter <= 32'd500000; //Every 10ms updated switch state
+				SW0_debounced <= SW0;
+			end
+			if (SW9 != SW9_debounced) begin //Player 2
+				counter <= 32'd500000; //Every 10ms updated switch state
+				SW9_debounced <= SW9;
+			end
+		end else begin
+			counter <= counter - 32'd1;
+		end
 	end
 	
 endmodule
@@ -177,7 +177,8 @@ module Counter(clk,reset,dec,lock,LEDR,set_idle,in_progress,ARDUINO[3:0],winner,
 			yellow_LED = 0;
 			green_LED = 0;
 		end
-			
+
+		//Toggle the Arduino LEDs based on the countdown	
 		if(dec < (countdown >> 1) && dec > 32'd0 && !winner && in_progress)
 			yellow_LED = 1;
 			
@@ -192,6 +193,7 @@ module Counter(clk,reset,dec,lock,LEDR,set_idle,in_progress,ARDUINO[3:0],winner,
 			green_LED = 0;
 		end		
 
+		// Flash all the LEDs for the victory screen
 		if(winner) begin
 			lights = lights >>> 1;
 			case(lights)
@@ -262,50 +264,50 @@ module segmentDisplay(p2, p1, HEX0[7:0],HEX1[7:0],HEX2[7:0],HEX3[7:0],HEX4[7:0],
 		if (p1 >= 32'd5 || p2 >= 32'd5) //One of the players has won
 		begin
 			winner = 1;
-			a = 7'b0001100; // display "P"
-			c = 8'b11000001; // display "V"
-			d = 8'b11111001; // display "I"
-			e = 8'b11000110; // display "C"
-			f = 7'b0000111; // display "t"
+			a = 7'b0001100; //Display "P"
+			c = 8'b11000001; //Display "V"
+			d = 8'b11111001; //Display "I"
+			e = 8'b11000110; //Display "C"
+			f = 7'b0000111; //Display "t"
 			if (p1 == 32'd5) begin
-				b = 8'b11111001; // display "1" for p1
+				b = 8'b11111001; //Display "1" for p1
 			end else if (p2 == 32'd5) begin
-				b = 8'b10100100; // display "2" for p2
+				b = 8'b10100100; //Display "2" for p2
 			end
 		end else begin //No winner yet, display the score
 			//Display first player's score
 			case(p1)
-				32'd0: begin
+				32'd0: begin //p1 score = 0
 					a = 7'b1000000;
 				end
-				32'd1: begin
+				32'd1: begin //p1 score = 1
 					a = 7'b1111001;
 				end
-				32'd2: begin
+				32'd2: begin //p1 score = 2
 					a = 7'b0100100;
 				end
-				32'd3: begin
+				32'd3: begin //p1 score = 3
 					a = 7'b0110000;
 				end
-				32'd4: begin
+				32'd4: begin //p1 score = 4
 					a = 7'b0011001;
 				end
 			endcase
 			//Display second player's score
 			case(p2)
-				32'd0: begin
+				32'd0: begin //p2 score = 0
 					f = 7'b1000000;
 				end
-				32'd1: begin
+				32'd1: begin //p2 score = 1
 					f = 7'b1111001;
 				end
-				32'd2: begin
+				32'd2: begin //p2 score = 2
 					f = 7'b0100100;
 				end
-				32'd3: begin
+				32'd3: begin //p2 score = 3
 					f = 7'b0110000;
 				end
-				32'd4: begin
+				32'd4: begin //p2 score = 4
 					f = 7'b0011001;
 				end
 			endcase
