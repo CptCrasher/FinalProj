@@ -134,6 +134,6 @@ module DE10_LITE_Golden_Top(
 //  Structural coding
 //=======================================================
 
-
+FinalProject(KEY[1:0],SW[0],SW[9],MAX10_CLK1_50,HEX0,HEX1,HEX2,HEX3,HEX4,HEX5,LEDR[0],ARDUINO_IO[3:0]);
 
 endmodule
